@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TAGOJA | Global Commerce Platform & Supply Infrastructure</title>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* LANGUAGE SELECTOR */
+    .language-selector {
+      position: relative;
+      display: inline-block;
+    }
+
+    .language-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 12px;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .language-btn:hover {
+      background: #e5e7eb;
+    }
+
+    .language-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 8px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      min-width: 180px;
+      z-index: 1000;
+    }
+
+    .language-selector.active .language-dropdown {
+      display: block;
+    }
+
+    .language-option {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      cursor: pointer;
+      transition: background 0.2s;
+      font-size: 14px;
+    }
+
+    .language-option:hover {
+      background: #f9fafb;
+    }
+
+    .language-option.selected {
+      background: #fef3c7;
+      font-weight: 600;
+    }
+
+    .lang-flag {
+      font-size: 20px;
+    }
+
+    /* HEADER */
+    header {
+      padding: 16px 0;
+      border-bottom: 1px solid #e5e7eb;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-menu a {
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: all 0.2s;
+      color: #4b5563;
+    }
+
+    .nav-menu a:hover {
+      background: #f3f4f6;
+      color: #1a1a1a;
+    }
+
+    .nav-marketplace {
+      color: #2563eb !important;
+    }
+
+    .nav-supply {
+      color: #7c3aed !important;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 80px 20px 60px;
+      text-align: center;
+      background: linear-gradient(180deg, #fef3c7 0%, #ffffff 100%);
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: #1a1a1a;
+    }
+
+    .hero .gradient-text {
+      background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero .subtitle {
+      font-size: 22px;
+      color: #6b7280;
+      margin-bottom: 48px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* DUAL PLATFORM CARDS */
+    .platform-showcase {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .platform-main-card {
+      background: white;
+      border-radius: 20px;
+      padding: 48px 40px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+      transition: all 0.3s;
+      border: 3px solid transparent;
+    }
+
+    .platform-main-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    }
+
+    .platform-main-card.marketplace {
+      border-color: #3b82f6;
+    }
+
+    .platform-main-card.supply {
+      border-color: #8b5cf6;
+    }
+
+    .platform-icon {
+      font-size: 64px;
+      margin-bottom: 20px;
+    }
+
+    .platform-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .platform-tag.marketplace {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .platform-tag.supply {
+      background: #ede9fe;
+      color: #6b21a8;
+    }
+
+    .platform-main-card h2 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+
+    .platform-main-card p {
+      color: #6b7280;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .platform-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .platform-features li {
+      padding: 10px 0;
+      color: #374151;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .platform-features li:before {
+      content: "✓";
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .platform-main-card.marketplace .platform-features li:before {
+      color: #3b82f6;
+    }
+
+    .platform-main-card.supply .platform-features li:before {
+      color: #8b5cf6;
+    }
+
+    .platform-btn {
+      display: inline-block;
+      width: 100%;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .platform-btn.marketplace {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .platform-btn.marketplace:hover {
+      background: #2563eb;
+      transform: translateY(-2px);
+    }
+
+    .platform-btn.supply {
+      background: #8b5cf6;
+      color: white;
+    }
+
+    .platform-btn.supply:hover {
+      background: #7c3aed;
+      transform: translateY(-2px);
+    }
+
+    /* VALUE PROPS */
+    .value-props {
+      padding: 100px 20px;
+      background: #f9fafb;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      padding: 6px 16px;
+      background: #fef3c7;
+      color: #92400e;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 42px;
+      font-weight: 900;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 18px;
+      color: #6b7280;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .value-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.3s;
+    }
+
+    .value-card:hover {
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+      transform: translateY(-4px);
+    }
+
+    .value-icon {
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+
+    .value-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #1a1a1a;
+    }
+
+    .value-card p {
+      color: #6b7280;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* MARKETPLACE DETAILS */
+    .marketplace-details {
+      padding: 100px 20px;
+    }
+
+    .detail-section {
+      margin-bottom: 80px;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 40px;
+    }
+
+    .detail-card {
+      background: #f9fafb;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .detail-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #1a1a1a;
+    }
+
+    .detail-card p {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    /* SUPPLY ENGINE DETAILS */
+    .supply-details {
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+      color: white;
+    }
+
+    .supply-details .section-tag {
+      background: rgba(139, 92, 246, 0.3);
+      color: #c4b5fd;
+    }
+
+    .supply-details .section-title {
+      color: white;
+    }
+
+    .supply-details .section-subtitle {
+      color: #cbd5e1;
+    }
+
+    .supply-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 60px;
+    }
+
+    .supply-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 36px;
+      transition: all 0.3s;
+    }
+
+    .supply-card:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: #8b5cf6;
+      transform: translateY(-4px);
+    }
+
+    .supply-card-icon {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .supply-card h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: white;
+    }
+
+    .supply-card p {
+      color: #cbd5e1;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .supply-card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .supply-card ul li {
+      padding: 8px 0;
+      color: #94a3b8;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .supply-card ul li:before {
+      content: "→";
+      color: #8b5cf6;
+      font-weight: 900;
+    }
+
+    /* REGIONS */
+    .regions {
+      padding: 100px 20px;
+    }
+
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .region-card {
+      background: #f9fafb;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .region-card:hover {
+      background: white;
+      border-color: #f97316;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .region-flag {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .region-card h4 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .region-card p {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    .region-status {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    .region-status.live {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .region-status.soon {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    /* CTA */
+    .final-cta {
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+      color: white;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .final-cta p {
+      font-size: 20px;
+      line-height: 1.7;
+      margin-bottom: 48px;
+      opacity: 0.95;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-white {
+      background: white;
+      color: #dc2626;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #dc2626;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 60px 20px 40px;
+      background: #0f172a;
+      color: white;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand h3 {
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      color: #94a3b8;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 20px;
+      transition: all 0.2s;
+    }
+
+    .social-link:hover {
+      background: #f97316;
+      transform: translateY(-2px);
+    }
+
+    .footer-links h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: #94a3b8;
+      text-decoration: none;
+      margin-bottom: 12px;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #f97316;
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-bottom-links a {
+      color: #64748b;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: #f97316;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .platform-showcase {
+        grid-template-columns: 1fr;
+      }
+
+      .supply-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero .subtitle {
+        font-size: 18px;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .platform-main-card h2 {
+        font-size: 26px;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">TAGOJA</div>
+      <div class="nav-wrapper">
+        <div class="nav-menu">
+          <a href="#marketplace" class="nav-marketplace" data-i18n="nav.marketplace">Marketplace</a>
+          <a href="#supply" class="nav-supply" data-i18n="nav.supply">Supply Engine</a>
+          <a href="#regions" data-i18n="nav.regions">Regions</a>
+        </div>
+        
+        <!-- LANGUAGE SELECTOR -->
+        <div class="language-selector" id="languageSelector">
+          <button class="language-btn" onclick="toggleLanguageMenu()">
+            <span class="lang-flag" id="currentFlag">🇬🇧</span>
+            <span id="currentLang">EN</span>
+            <span>▼</span>
+          </button>
+          
+          <div class="language-dropdown">
+            <div class="language-option" onclick="changeLanguage('en', '🇬🇧', 'EN')">
+              <span class="lang-flag">🇬🇧</span>
+              <span>English</span>
+            </div>
+            <div class="language-option" onclick="changeLanguage('ko', '🇰🇷', '한국어')">
+              <span class="lang-flag">🇰🇷</span>
+              <span>한국어</span>
+            </div>
+            <div class="language-option" onclick="changeLanguage('tl', '🇵🇭', 'Tagalog')">
+              <span class="lang-flag">🇵🇭</span>
+              <span>Tagalog</span>
+            </div>
+            <div class="language-option" onclick="changeLanguage('id', '🇮🇩', 'Bahasa')">
+              <span class="lang-flag">🇮🇩</span>
+              <span>Bahasa Indonesia</span>
+            </div>
+            <div class="language-option" onclick="changeLanguage('th', '🇹🇭', 'ไทย')">
+              <span class="lang-flag">🇹🇭</span>
+              <span>ภาษาไทย</span>
+            </div>
+            <div class="language-option" onclick="changeLanguage('vi', '🇻🇳', 'Tiếng Việt')">
+              <span class="lang-flag">🇻🇳</span>
+              <span>Tiếng Việt</span>
+            </div>
+            <div class="language-option" onclick="changeLanguage('zh', '🇨🇳', '中文')">
+              <span class="lang-flag">🇨🇳</span>
+              <span>中文</span>
+            </div>
+            <div class="language-option" onclick="changeLanguage('ja', '🇯🇵', '日本語')">
+              <span class="lang-flag">🇯🇵</span>
+              <span>日本語</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>
+      <span data-i18n="hero.title1">The Complete</span><br/>
+      <span class="gradient-text" data-i18n="hero.title2">Global Commerce Ecosystem</span>
+    </h1>
+    <p class="subtitle" data-i18n="hero.subtitle">
+      Trade anything, anywhere. Connect suppliers, sellers, and logistics in one unified platform 
+      — from local deals to global supply chains.
+    </p>
+    
+    <div class="platform-showcase">
+      
+      <!-- MARKETPLACE CARD -->
+      <div class="platform-main-card marketplace">
+        <div class="platform-icon">🛒</div>
+        <span class="platform-tag marketplace" data-i18n="marketplace.tag">FOR BUYERS & SELLERS</span>
+        <h2 data-i18n="marketplace.title">Marketplace</h2>
+        <p data-i18n="marketplace.description">
+          Buy and sell everything — from secondhand items to new products, 
+          real estate to jobs, local deals to global B2B trade.
+        </p>
+        
+        <ul class="platform-features">
+          <li data-i18n="marketplace.feature1">C2C Secondhand Trading</li>
+          <li data-i18n="marketplace.feature2">B2C New Product Sales</li>
+          <li data-i18n="marketplace.feature3">B2B Wholesale & Sourcing</li>
+          <li data-i18n="marketplace.feature4">Real Estate Listings</li>
+          <li data-i18n="marketplace.feature5">Jobs & Services</li>
+          <li data-i18n="marketplace.feature6">Community Forums</li>
+        </ul>
+        
+        <a href="https://market.tagoja.com" class="platform-btn marketplace" data-i18n="marketplace.cta">
+          Browse Marketplace →
+        </a>
+      </div>
+
+      <!-- SUPPLY ENGINE CARD -->
+      <div class="platform-main-card supply">
+        <div class="platform-icon">⚙️</div>
+        <span class="platform-tag supply" data-i18n="supply.tag">FOR BUSINESSES</span>
+        <h2 data-i18n="supply.title">Supply Engine</h2>
+        <p data-i18n="supply.description">
+          Connect suppliers, sellers, and logistics partners. 
+          Automate global sourcing, fulfillment, and dropshipping at scale.
+        </p>
+        
+        <ul class="platform-features">
+          <li data-i18n="supply.feature1">Supplier Network Access</li>
+          <li data-i18n="supply.feature2">Zero-Inventory Selling</li>
+          <li data-i18n="supply.feature3">3PL Integration</li>
+          <li data-i18n="supply.feature4">Automated Fulfillment</li>
+          <li data-i18n="supply.feature5">Cross-Border Logistics</li>
+          <li data-i18n="supply.feature6">Multi-Channel Sync</li>
+        </ul>
+        
+        <a href="https://supply.tagoja.com" class="platform-btn supply" data-i18n="supply.cta">
+          Explore Supply Engine →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUE PROPS -->
+<section class="value-props">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="values.tag">WHY TAGOJA</span>
+      <h2 class="section-title" data-i18n="values.title">One Platform, Infinite Possibilities</h2>
+      <p class="section-subtitle" data-i18n="values.subtitle">
+        Everything you need for modern commerce, all in one place
+      </p>
+    </div>
+    
+    <div class="value-grid">
+      
+      <div class="value-card">
+        <div class="value-icon">🌍</div>
+        <h3 data-i18n="values.global.title">Global Reach</h3>
+        <p data-i18n="values.global.description">Trade locally or expand globally. Access markets across Southeast Asia and beyond.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">🔗</div>
+        <h3 data-i18n="values.unified.title">Unified Infrastructure</h3>
+        <p data-i18n="values.unified.description">One platform connects buyers, sellers, suppliers, and logistics — no more fragmentation.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">⚡</div>
+        <h3 data-i18n="values.inventory.title">Zero Inventory Risk</h3>
+        <p data-i18n="values.inventory.description">Sell globally without holding stock. Automated dropshipping handles the rest.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">🔒</div>
+        <h3 data-i18n="values.secure.title">Secure Transactions</h3>
+        <p data-i18n="values.secure.description">Escrow payments, verified partners, and buyer protection on every deal.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">🤖</div>
+        <h3 data-i18n="values.automation.title">Full Automation</h3>
+        <p data-i18n="values.automation.description">From product sourcing to delivery tracking — everything runs on autopilot.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">📈</div>
+        <h3 data-i18n="values.scale.title">Infinite Scale</h3>
+        <p data-i18n="values.scale.description">Built for growth. Start small, scale to multi-country operations seamlessly.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REGIONS -->
+<section class="regions" id="regions">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="regions.tag">GLOBAL EXPANSION</span>
+      <h2 class="section-title" data-i18n="regions.title">Starting in Southeast Asia</h2>
+      <p class="section-subtitle" data-i18n="regions.subtitle">
+        Launching country by country, building the future of global commerce
+      </p>
+    </div>
+    
+    <div class="region-grid">
+      
+      <div class="region-card">
+        <div class="region-flag">🇵🇭</div>
+        <h4>Philippines</h4>
+        <p>Metro Manila, Luzon, Visayas, Mindanao</p>
+        <span class="region-status live" data-i18n="regions.status.live">Now Live</span>
+      </div>
+
+      <div class="region-card">
+        <div class="region-flag">🇮🇩</div>
+        <h4>Indonesia</h4>
+        <p>Jakarta, Surabaya, Bandung, Medan</p>
+        <span class="region-status soon">Q3 2026</span>
+      </div>
+
+      <div class="region-card">
+        <div class="region-flag">🇹🇭</div>
+        <h4>Thailand</h4>
+        <p>Bangkok, Chiang Mai, Phuket</p>
+        <span class="region-status soon">Q4 2026</span>
+      </div>
+
+      <div class="region-card">
+        <div class="region-flag">🇻🇳</div>
+        <h4>Vietnam</h4>
+        <p>Ho Chi Minh, Hanoi, Da Nang</p>
+        <span class="region-status soon">Q1 2027</span>
+      </div>
+
+      <div class="region-card">
+        <div class="region-flag">🇲🇾</div>
+        <h4>Malaysia</h4>
+        <p>Kuala Lumpur, Penang, Johor Bahru</p>
+        <span class="region-status soon">Q2 2027</span>
+      </div>
+
+      <div class="region-card">
+        <div class="region-flag">🇸🇬</div>
+        <h4>Singapore</h4>
+        <p>Central, East, West, North</p>
+        <span class="region-status soon">Q2 2027</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2 data-i18n="cta.title">Ready to Transform Your Business?</h2>
+    <p data-i18n="cta.description">
+      Whether you're buying your first item or scaling a global supply chain, 
+      TAGOJA has everything you need to succeed.
+    </p>
+    
+    <div class="cta-buttons">
+      <a href="https://market.tagoja.com" class="btn-white" data-i18n="cta.marketplace">
+        Start Trading Now
+      </a>
+      <a href="https://supply.tagoja.com" class="btn-outline" data-i18n="cta.supply">
+        Join Supply Network
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      
+      <div class="footer-brand">
+        <h3>TAGOJA</h3>
+        <p data-i18n="footer.description">
+          The complete global commerce ecosystem. One platform for trading, sourcing, 
+          and fulfillment — connecting Southeast Asia to the world.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.marketplace.title">Marketplace</h4>
+        <a href="https://market.tagoja.com" data-i18n="footer.marketplace.browse">Browse Products</a>
+        <a href="#" data-i18n="footer.marketplace.realestate">Real Estate</a>
+        <a href="#" data-i18n="footer.marketplace.jobs">Jobs</a>
+        <a href="#" data-i18n="footer.marketplace.community">Community</a>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.supply.title">Supply Engine</h4>
+        <a href="https://supply.tagoja.com" data-i18n="footer.supply.suppliers">For Suppliers</a>
+        <a href="https://supply.tagoja.com" data-i18n="footer.supply.sellers">For Sellers</a>
+        <a href="https://supply.tagoja.com" data-i18n="footer.supply.3pl">For 3PL</a>
+        <a href="#" data-i18n="footer.supply.partner">Partner Program</a>
+      </div>
+
+      <div class="footer-links">
+        <h4 data-i18n="footer.resources.title">Resources</h4>
+        <a href="#" data-i18n="footer.resources.help">Help Center</a>
+        <a href="https://api.tagoja.com">API Docs</a>
+        <a href="https://tagojax.com">Exchange</a>
+        <a href="#" data-i18n="footer.resources.contact">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 TAGOJA. All rights reserved.</div>
+      <div class="footer-bottom-links">
+        <a href="#" data-i18n="footer.legal.privacy">Privacy</a>
+        <a href="#" data-i18n="footer.legal.terms">Terms</a>
+        <a href="#" data-i18n="footer.legal.cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Language Translations
+const translations = {
+  en: {
+    "nav.marketplace": "Marketplace",
+    "nav.supply": "Supply Engine",
+    "nav.regions": "Regions",
+    "hero.title1": "The Complete",
+    "hero.title2": "Global Commerce Ecosystem",
+    "hero.subtitle": "Trade anything, anywhere. Connect suppliers, sellers, and logistics in one unified platform — from local deals to global supply chains.",
+    "marketplace.tag": "FOR BUYERS & SELLERS",
+    "marketplace.title": "Marketplace",
+    "marketplace.description": "Buy and sell everything — from secondhand items to new products, real estate to jobs, local deals to global B2B trade.",
+    "marketplace.feature1": "C2C Secondhand Trading",
+    "marketplace.feature2": "B2C New Product Sales",
+    "marketplace.feature3": "B2B Wholesale & Sourcing",
+    "marketplace.feature4": "Real Estate Listings",
+    "marketplace.feature5": "Jobs & Services",
+    "marketplace.feature6": "Community Forums",
+    "marketplace.cta": "Browse Marketplace →",
+    "supply.tag": "FOR BUSINESSES",
+    "supply.title": "Supply Engine",
+    "supply.description": "Connect suppliers, sellers, and logistics partners. Automate global sourcing, fulfillment, and dropshipping at scale.",
+    "supply.feature1": "Supplier Network Access",
+    "supply.feature2": "Zero-Inventory Selling",
+    "supply.feature3": "3PL Integration",
+    "supply.feature4": "Automated Fulfillment",
+    "supply.feature5": "Cross-Border Logistics",
+    "supply.feature6": "Multi-Channel Sync",
+    "supply.cta": "Explore Supply Engine →",
+    "values.tag": "WHY TAGOJA",
+    "values.title": "One Platform, Infinite Possibilities",
+    "values.subtitle": "Everything you need for modern commerce, all in one place",
+    "values.global.title": "Global Reach",
+    "values.global.description": "Trade locally or expand globally. Access markets across Southeast Asia and beyond.",
+    "values.unified.title": "Unified Infrastructure",
+    "values.unified.description": "One platform connects buyers, sellers, suppliers, and logistics — no more fragmentation.",
+    "values.inventory.title": "Zero Inventory Risk",
+    "values.inventory.description": "Sell globally without holding stock. Automated dropshipping handles the rest.",
+    "values.secure.title": "Secure Transactions",
+    "values.secure.description": "Escrow payments, verified partners, and buyer protection on every deal.",
+    "values.automation.title": "Full Automation",
+    "values.automation.description": "From product sourcing to delivery tracking — everything runs on autopilot.",
+    "values.scale.title": "Infinite Scale",
+    "values.scale.description": "Built for growth. Start small, scale to multi-country operations seamlessly.",
+    "regions.tag": "GLOBAL EXPANSION",
+    "regions.title": "Starting in Southeast Asia",
+    "regions.subtitle": "Launching country by country, building the future of global commerce",
+    "regions.status.live": "Now Live",
+    "cta.title": "Ready to Transform Your Business?",
+    "cta.description": "Whether you're buying your first item or scaling a global supply chain, TAGOJA has everything you need to succeed.",
+    "cta.marketplace": "Start Trading Now",
+    "cta.supply": "Join Supply Network",
+    "footer.description": "The complete global commerce ecosystem. One platform for trading, sourcing, and fulfillment — connecting Southeast Asia to the world.",
+    "footer.marketplace.title": "Marketplace",
+    "footer.marketplace.browse": "Browse Products",
+    "footer.marketplace.realestate": "Real Estate",
+    "footer.marketplace.jobs": "Jobs",
+    "footer.marketplace.community": "Community",
+    "footer.supply.title": "Supply Engine",
+    "footer.supply.suppliers": "For Suppliers",
+    "footer.supply.sellers": "For Sellers",
+    "footer.supply.3pl": "For 3PL",
+    "footer.supply.partner": "Partner Program",
+    "footer.resources.title": "Resources",
+    "footer.resources.help": "Help Center",
+    "footer.resources.contact": "Contact",
+    "footer.legal.privacy": "Privacy",
+    "footer.legal.terms": "Terms",
+    "footer.legal.cookies": "Cookies"
+  },
+  ko: {
+    "nav.marketplace": "마켓플레이스",
+    "nav.supply": "공급 엔진",
+    "nav.regions": "지역",
+    "hero.title1": "완전한",
+    "hero.title2": "글로벌 커머스 생태계",
+    "hero.subtitle": "무엇이든, 어디서든 거래하세요. 공급업체, 판매자, 물류를 하나의 통합 플랫폼에서 연결 — 로컬 거래부터 글로벌 공급망까지.",
+    "marketplace.tag": "구매자 & 판매자용",
+    "marketplace.title": "마켓플레이스",
+    "marketplace.description": "중고 물품부터 신제품, 부동산, 구인구직, 로컬 거래부터 글로벌 B2B 무역까지 모든 것을 사고 팔 수 있습니다.",
+    "marketplace.feature1": "C2C 중고 거래",
+    "marketplace.feature2": "B2C 신제품 판매",
+    "marketplace.feature3": "B2B 도매 & 소싱",
+    "marketplace.feature4": "부동산 리스팅",
+    "marketplace.feature5": "구인 & 서비스",
+    "marketplace.feature6": "커뮤니티 포럼",
+    "marketplace.cta": "마켓플레이스 둘러보기 →",
+    "supply.tag": "비즈니스용",
+    "supply.title": "공급 엔진",
+    "supply.description": "공급업체, 판매자, 물류 파트너를 연결하세요. 글로벌 소싱, 주문처리, 드롭쉬핑을 대규모로 자동화합니다.",
+    "supply.feature1": "공급업체 네트워크 접근",
+    "supply.feature2": "재고 없는 판매",
+    "supply.feature3": "3PL 통합",
+    "supply.feature4": "자동화된 주문처리",
+    "supply.feature5": "국경간 물류",
+    "supply.feature6": "멀티채널 동기화",
+    "supply.cta": "공급 엔진 살펴보기 →",
+    "values.tag": "왜 TAGOJA인가",
+    "values.title": "하나의 플랫폼, 무한한 가능성",
+    "values.subtitle": "현대 커머스에 필요한 모든 것을 한 곳에서",
+    "values.global.title": "글로벌 도달",
+    "values.global.description": "로컬로 거래하거나 글로벌로 확장하세요. 동남아시아와 그 너머의 시장에 접근하세요.",
+    "values.unified.title": "통합 인프라",
+    "values.unified.description": "하나의 플랫폼이 구매자, 판매자, 공급업체, 물류를 연결 — 더 이상 분산되지 않습니다.",
+    "values.inventory.title": "재고 리스크 제로",
+    "values.inventory.description": "재고 없이 글로벌로 판매하세요. 자동화된 드롭쉬핑이 나머지를 처리합니다.",
+    "values.secure.title": "안전한 거래",
+    "values.secure.description": "에스크로 결제, 검증된 파트너, 모든 거래에 구매자 보호.",
+    "values.automation.title": "완전 자동화",
+    "values.automation.description": "제품 소싱부터 배송 추적까지 — 모든 것이 자동으로 실행됩니다.",
+    "values.scale.title": "무한 확장",
+    "values.scale.description": "성장을 위해 구축되었습니다. 작게 시작하여 다국가 운영으로 원활하게 확장하세요.",
+    "regions.tag": "글로벌 확장",
+    "regions.title": "동남아시아에서 시작",
+    "regions.subtitle": "국가별로 출시하며 글로벌 커머스의 미래를 구축합니다",
+    "regions.status.live": "현재 운영중",
+    "cta.title": "비즈니스를 혁신할 준비가 되셨나요?",
+    "cta.description": "첫 물품을 구매하든 글로벌 공급망을 확장하든, TAGOJA는 성공에 필요한 모든 것을 갖추고 있습니다.",
+    "cta.marketplace": "지금 거래 시작",
+    "cta.supply": "공급 네트워크 가입",
+    "footer.description": "완전한 글로벌 커머스 생태계. 거래, 소싱, 주문처리를 위한 하나의 플랫폼 — 동남아시아를 세계와 연결합니다.",
+    "footer.marketplace.title": "마켓플레이스",
+    "footer.marketplace.browse": "상품 둘러보기",
+    "footer.marketplace.realestate": "부동산",
+    "footer.marketplace.jobs": "구인구직",
+    "footer.marketplace.community": "커뮤니티",
+    "footer.supply.title": "공급 엔진",
+    "footer.supply.suppliers": "공급업체용",
+    "footer.supply.sellers": "판매자용",
+    "footer.supply.3pl": "3PL용",
+    "footer.supply.partner": "파트너 프로그램",
+    "footer.resources.title": "리소스",
+    "footer.resources.help": "고객센터",
+    "footer.resources.contact": "연락처",
+    "footer.legal.privacy": "개인정보",
+    "footer.legal.terms": "이용약관",
+    "footer.legal.cookies": "쿠키"
+  },
+  tl: {
+    "nav.marketplace": "Marketplace",
+    "nav.supply": "Supply Engine",
+    "nav.regions": "Mga Rehiyon",
+    "hero.title1": "Ang Kumpletong",
+    "hero.title2": "Global Commerce Ecosystem",
+    "hero.subtitle": "Makipagkalakalan ng kahit ano, kahit saan. Ikonekta ang mga supplier, seller, at logistics sa isang unified platform — mula sa lokal na deals hanggang sa global supply chains.",
+    "marketplace.tag": "PARA SA MGA BUMILI & NAGBEBENTA",
+    "marketplace.title": "Marketplace",
+    "marketplace.description": "Bumili at magbenta ng lahat — mula sa secondhand items hanggang sa bagong produkto, real estate hanggang sa trabaho, lokal na deals hanggang sa global B2B trade.",
+    "marketplace.feature1": "C2C Secondhand Trading",
+    "marketplace.feature2": "B2C Bagong Produkto",
+    "marketplace.feature3": "B2B Wholesale & Sourcing",
+    "marketplace.feature4": "Real Estate Listings",
+    "marketplace.feature5": "Trabaho & Serbisyo",
+    "marketplace.feature6": "Community Forums",
+    "marketplace.cta": "Tingnan ang Marketplace →",
+    "supply.tag": "PARA SA MGA NEGOSYO",
+    "supply.title": "Supply Engine",
+    "supply.description": "Ikonekta ang mga supplier, seller, at logistics partners. I-automate ang global sourcing, fulfillment, at dropshipping.",
+    "supply.feature1": "Access sa Supplier Network",
+    "supply.feature2": "Walang Inventory na Pagbebenta",
+    "supply.feature3": "3PL Integration",
+    "supply.feature4": "Automated Fulfillment",
+    "supply.feature5": "Cross-Border Logistics",
+    "supply.feature6": "Multi-Channel Sync",
+    "supply.cta": "Alamin ang Supply Engine →",
+    "values.tag": "BAKIT TAGOJA",
+    "values.title": "Isang Platform, Walang Hanggang Posibilidad",
+    "values.subtitle": "Lahat ng kailangan mo para sa modernong kalakalan, nasa iisang lugar",
+    "values.global.title": "Global Reach",
+    "values.global.description": "Makipagkalakalan locally o mag-expand globally. Access sa mga market sa Southeast Asia at higit pa.",
+    "values.unified.title": "Unified Infrastructure",
+    "values.unified.description": "Isang platform ang nag-uugnay sa mga buyer, seller, supplier, at logistics — walang fragmentation.",
+    "values.inventory.title": "Zero Inventory Risk",
+    "values.inventory.description": "Magbenta globally nang walang stock. Automated dropshipping ang bahala sa iba.",
+    "values.secure.title": "Secure Transactions",
+    "values.secure.description": "Escrow payments, verified partners, at buyer protection sa bawat deal.",
+    "values.automation.title": "Full Automation",
+    "values.automation.description": "Mula product sourcing hanggang delivery tracking — lahat ay tumatakbo nang kusang-loob.",
+    "values.scale.title": "Infinite Scale",
+    "values.scale.description": "Ginawa para sa paglaki. Magsimula ng maliit, mag-scale sa multi-country operations nang walang problema.",
+    "regions.tag": "GLOBAL EXPANSION",
+    "regions.title": "Nagsisimula sa Southeast Asia",
+    "regions.subtitle": "Inilulunsad bawat bansa, binubuo ang kinabukasan ng global commerce",
+    "regions.status.live": "Live Na Ngayon",
+    "cta.title": "Handa ka na bang i-Transform ang Iyong Negosyo?",
+    "cta.description": "Kung bumibili ka ng unang item o nag-scale ng global supply chain, TAGOJA ay may lahat ng kailangan mo para magtagumpay.",
+    "cta.marketplace": "Magsimula ng Trading Ngayon",
+    "cta.supply": "Sumali sa Supply Network",
+    "footer.description": "Ang kumpletong global commerce ecosystem. Isang platform para sa trading, sourcing, at fulfillment — nag-uugnay ng Southeast Asia sa mundo.",
+    "footer.marketplace.title": "Marketplace",
+    "footer.marketplace.browse": "Tingnan ang mga Produkto",
+    "footer.marketplace.realestate": "Real Estate",
+    "footer.marketplace.jobs": "Trabaho",
+    "footer.marketplace.community": "Komunidad",
+    "footer.supply.title": "Supply Engine",
+    "footer.supply.suppliers": "Para sa mga Supplier",
+    "footer.supply.sellers": "Para sa mga Seller",
+    "footer.supply.3pl": "Para sa 3PL",
+    "footer.supply.partner": "Partner Program",
+    "footer.resources.title": "Resources",
+    "footer.resources.help": "Help Center",
+    "footer.resources.contact": "Makipag-ugnayan",
+    "footer.legal.privacy": "Privacy",
+    "footer.legal.terms": "Terms",
+    "footer.legal.cookies": "Cookies"
+  },
+  id: {
+    "nav.marketplace": "Marketplace",
+    "nav.supply": "Supply Engine",
+    "nav.regions": "Wilayah",
+    "hero.title1": "Ekosistem",
+    "hero.title2": "Perdagangan Global Lengkap",
+    "hero.subtitle": "Perdagangkan apa saja, di mana saja. Hubungkan pemasok, penjual, dan logistik dalam satu platform terpadu — dari transaksi lokal hingga rantai pasokan global.",
+    "marketplace.tag": "UNTUK PEMBELI & PENJUAL",
+    "marketplace.title": "Marketplace",
+    "marketplace.description": "Beli dan jual semuanya — dari barang bekas hingga produk baru, real estat hingga pekerjaan, transaksi lokal hingga perdagangan B2B global.",
+    "marketplace.feature1": "Perdagangan Barang Bekas C2C",
+    "marketplace.feature2": "Penjualan Produk Baru B2C",
+    "marketplace.feature3": "Grosir & Sourcing B2B",
+    "marketplace.feature4": "Listing Real Estat",
+    "marketplace.feature5": "Pekerjaan & Layanan",
+    "marketplace.feature6": "Forum Komunitas",
+    "marketplace.cta": "Jelajahi Marketplace →",
+    "supply.tag": "UNTUK BISNIS",
+    "supply.title": "Supply Engine",
+    "supply.description": "Hubungkan pemasok, penjual, dan mitra logistik. Otomatisasi sourcing global, fulfillment, dan dropshipping dalam skala besar.",
+    "supply.feature1": "Akses Jaringan Pemasok",
+    "supply.feature2": "Penjualan Tanpa Inventori",
+    "supply.feature3": "Integrasi 3PL",
+    "supply.feature4": "Fulfillment Otomatis",
+    "supply.feature5": "Logistik Lintas Batas",
+    "supply.feature6": "Sinkronisasi Multi-Channel",
+    "supply.cta": "Jelajahi Supply Engine →",
+    "values.tag": "MENGAPA TAGOJA",
+    "values.title": "Satu Platform, Kemungkinan Tak Terbatas",
+    "values.subtitle": "Semua yang Anda butuhkan untuk perdagangan modern, dalam satu tempat",
+    "values.global.title": "Jangkauan Global",
+    "values.global.description": "Berdagang secara lokal atau berkembang secara global. Akses pasar di seluruh Asia Tenggara dan sekitarnya.",
+    "values.unified.title": "Infrastruktur Terpadu",
+    "values.unified.description": "Satu platform menghubungkan pembeli, penjual, pemasok, dan logistik — tidak ada fragmentasi lagi.",
+    "values.inventory.title": "Risiko Inventori Nol",
+    "values.inventory.description": "Jual secara global tanpa menyimpan stok. Dropshipping otomatis menangani sisanya.",
+    "values.secure.title": "Transaksi Aman",
+    "values.secure.description": "Pembayaran escrow, mitra terverifikasi, dan perlindungan pembeli di setiap transaksi.",
+    "values.automation.title": "Otomasi Penuh",
+    "values.automation.description": "Dari sourcing produk hingga pelacakan pengiriman — semuanya berjalan otomatis.",
+    "values.scale.title": "Skala Tak Terbatas",
+    "values.scale.description": "Dibangun untuk pertumbuhan. Mulai kecil, berkembang ke operasi multi-negara dengan mulus.",
+    "regions.tag": "EKSPANSI GLOBAL",
+    "regions.title": "Dimulai di Asia Tenggara",
+    "regions.subtitle": "Meluncur negara demi negara, membangun masa depan perdagangan global",
+    "regions.status.live": "Aktif Sekarang",
+    "cta.title": "Siap Mentransformasi Bisnis Anda?",
+    "cta.description": "Baik Anda membeli item pertama atau menskalakan rantai pasokan global, TAGOJA memiliki semua yang Anda butuhkan untuk sukses.",
+    "cta.marketplace": "Mulai Trading Sekarang",
+    "cta.supply": "Bergabung dengan Supply Network",
+    "footer.description": "Ekosistem perdagangan global lengkap. Satu platform untuk trading, sourcing, dan fulfillment — menghubungkan Asia Tenggara dengan dunia.",
+    "footer.marketplace.title": "Marketplace",
+    "footer.marketplace.browse": "Jelajahi Produk",
+    "footer.marketplace.realestate": "Real Estat",
+    "footer.marketplace.jobs": "Pekerjaan",
+    "footer.marketplace.community": "Komunitas",
+    "footer.supply.title": "Supply Engine",
+    "footer.supply.suppliers": "Untuk Pemasok",
+    "footer.supply.sellers": "Untuk Penjual",
+    "footer.supply.3pl": "Untuk 3PL",
+    "footer.supply.partner": "Program Mitra",
+    "footer.resources.title": "Sumber Daya",
+    "footer.resources.help": "Pusat Bantuan",
+    "footer.resources.contact": "Kontak",
+    "footer.legal.privacy": "Privasi",
+    "footer.legal.terms": "Ketentuan",
+    "footer.legal.cookies": "Cookie"
+  },
+  th: {
+    "nav.marketplace": "ตลาดกลาง",
+    "nav.supply": "ระบบซัพพลาย",
+    "nav.regions": "ภูมิภาค",
+    "hero.title1": "ระบบนิเวศ",
+    "hero.title2": "การค้าระดับโลกที่สมบูรณ์",
+    "hero.subtitle": "ซื้อขายทุกอย่าง ทุกที่ เชื่อมต่อซัพพลายเออร์ ผู้ขาย และโลจิสติกส์ในแพลตฟอร์มเดียว — จากดีลในท้องถิ่นไปจนถึงห่วงโซ่อุปทานระดับโลก",
+    "marketplace.tag": "สำหรับผู้ซื้อและผู้ขาย",
+    "marketplace.title": "ตลาดกลาง",
+    "marketplace.description": "ซื้อและขายทุกอย่าง — จากสินค้ามือสองไปจนถึงสินค้าใหม่ อสังหาริมทรัพย์ไปจนถึงงาน ดีลในท้องถิ่นไปจนถึงการค้า B2B ระดับโลก",
+    "marketplace.feature1": "การซื้อขายมือสอง C2C",
+    "marketplace.feature2": "การขายสินค้าใหม่ B2C",
+    "marketplace.feature3": "ขายส่งและการจัดหา B2B",
+    "marketplace.feature4": "รายการอสังหาริมทรัพย์",
+    "marketplace.feature5": "งานและบริการ",
+    "marketplace.feature6": "ฟอรั่มชุมชน",
+    "marketplace.cta": "เรียกดูตลาดกลาง →",
+    "supply.tag": "สำหรับธุรกิจ",
+    "supply.title": "ระบบซัพพลาย",
+    "supply.description": "เชื่อมต่อซัพพลายเออร์ ผู้ขาย และพันธมิตรด้านโลจิสติกส์ ทำให้การจัดหา การดำเนินการ และ dropshipping ระดับโลกเป็นอัตโนมัติ",
+    "supply.feature1": "เข้าถึงเครือข่ายซัพพลายเออร์",
+    "supply.feature2": "ขายโดยไม่มีสต็อก",
+    "supply.feature3": "การรวม 3PL",
+    "supply.feature4": "การดำเนินการอัตโนมัติ",
+    "supply.feature5": "โลจิสติกส์ข้ามพรมแดน",
+    "supply.feature6": "การซิงค์หลายช่องทาง",
+    "supply.cta": "สำรวจระบบซัพพลาย →",
+    "values.tag": "ทำไมต้อง TAGOJA",
+    "values.title": "หนึ่งแพลตฟอร์ม ความเป็นไปได้ไม่จำกัด",
+    "values.subtitle": "ทุกสิ่งที่คุณต้องการสำหรับการค้าสมัยใหม่ ในที่เดียว",
+    "values.global.title": "การเข้าถึงระดับโลก",
+    "values.global.description": "ค้าขายในท้องถิ่นหรือขยายไปทั่วโลก เข้าถึงตลาดทั่วเอเชียตะวันออกเฉียงใต้และอื่นๆ",
+    "values.unified.title": "โครงสร้างพื้นฐานแบบรวม",
+    "values.unified.description": "แพลตฟอร์มเดียวเชื่อมต่อผู้ซื้อ ผู้ขาย ซัพพลายเออร์ และโลจิสติกส์ — ไม่มีการแยกส่วนอีกต่อไป",
+    "values.inventory.title": "ความเสี่ยงสต็อกเป็นศูนย์",
+    "values.inventory.description": "ขายทั่วโลกโดยไม่ต้องเก็บสต็อก dropshipping อัตโนมัติจัดการส่วนที่เหลือ",
+    "values.secure.title": "ธุรกรรมที่ปลอดภัย",
+    "values.secure.description": "การชำระเงิน escrow พันธมิตรที่ผ่านการตรวจสอบ และการปกป้องผู้ซื้อในทุกดีล",
+    "values.automation.title": "ระบบอัตโนมัติเต็มรูปแบบ",
+    "values.automation.description": "จากการจัดหาผลิตภัณฑ์ไปจนถึงการติดตามการจัดส่ง — ทุกอย่างทำงานโดยอัตโนมัติ",
+    "values.scale.title": "การขยายไม่จำกัด",
+    "values.scale.description": "สร้างขึ้นเพื่อการเติบโต เริ่มต้นเล็กๆ ขยายไปสู่การดำเนินงานหลายประเทศได้อย่างราบรื่น",
+    "regions.tag": "การขยายทั่วโลก",
+    "regions.title": "เริ่มต้นในเอเชียตะวันออกเฉียงใต้",
+    "regions.subtitle": "เปิดตัวทีละประเทศ สร้างอนาคตของการค้าโลก",
+    "regions.status.live": "เปิดให้บริการแล้ว",
+    "cta.title": "พร้อมที่จะเปลี่ยนแปลงธุรกิจของคุณหรือยัง?",
+    "cta.description": "ไม่ว่าคุณจะซื้อสินค้าชิ้นแรกหรือขยายห่วงโซ่อุปทานทั่วโลก TAGOJA มีทุกสิ่งที่คุณต้องการเพื่อความสำเร็จ",
+    "cta.marketplace": "เริ่มซื้อขายตอนนี้",
+    "cta.supply": "เข้าร่วมเครือข่ายซัพพลาย",
+    "footer.description": "ระบบนิเวศการค้าระดับโลกที่สมบูรณ์ หนึ่งแพลตฟอร์มสำหรับการซื้อขาย การจัดหา และการดำเนินการ — เชื่อมต่อเอเชียตะวันออกเฉียงใต้กับโลก",
+    "footer.marketplace.title": "ตลาดกลาง",
+    "footer.marketplace.browse": "เรียกดูผลิตภัณฑ์",
+    "footer.marketplace.realestate": "อสังหาริมทรัพย์",
+    "footer.marketplace.jobs": "งาน",
+    "footer.marketplace.community": "ชุมชน",
+    "footer.supply.title": "ระบบซัพพลาย",
+    "footer.supply.suppliers": "สำหรับซัพพลายเออร์",
+    "footer.supply.sellers": "สำหรับผู้ขาย",
+    "footer.supply.3pl": "สำหรับ 3PL",
+    "footer.supply.partner": "โปรแกรมพันธมิตร",
+    "footer.resources.title": "ทรัพยากร",
+    "footer.resources.help": "ศูนย์ช่วยเหลือ",
+    "footer.resources.contact": "ติดต่อ",
+    "footer.legal.privacy": "ความเป็นส่วนตัว",
+    "footer.legal.terms": "ข้อกำหนด",
+    "footer.legal.cookies": "คุกกี้"
+  },
+  vi: {
+    "nav.marketplace": "Chợ",
+    "nav.supply": "Hệ thống Cung ứng",
+    "nav.regions": "Khu vực",
+    "hero.title1": "Hệ sinh thái",
+    "hero.title2": "Thương mại Toàn cầu Hoàn chỉnh",
+    "hero.subtitle": "Giao dịch bất cứ thứ gì, bất cứ nơi đâu. Kết nối nhà cung cấp, người bán và logistics trong một nền tảng thống nhất — từ giao dịch địa phương đến chuỗi cung ứng toàn cầu.",
+    "marketplace.tag": "CHO NGƯỜI MUA & BÁN",
+    "marketplace.title": "Chợ",
+    "marketplace.description": "Mua và bán mọi thứ — từ hàng cũ đến sản phẩm mới, bất động sản đến việc làm, giao dịch địa phương đến thương mại B2B toàn cầu.",
+    "marketplace.feature1": "Giao dịch Hàng cũ C2C",
+    "marketplace.feature2": "Bán Sản phẩm Mới B2C",
+    "marketplace.feature3": "Bán sỉ & Tìm nguồn B2B",
+    "marketplace.feature4": "Danh sách Bất động sản",
+    "marketplace.feature5": "Việc làm & Dịch vụ",
+    "marketplace.feature6": "Diễn đàn Cộng đồng",
+    "marketplace.cta": "Duyệt Chợ →",
+    "supply.tag": "CHO DOANH NGHIỆP",
+    "supply.title": "Hệ thống Cung ứng",
+    "supply.description": "Kết nối nhà cung cấp, người bán và đối tác logistics. Tự động hóa tìm nguồn toàn cầu, thực hiện và dropshipping quy mô lớn.",
+    "supply.feature1": "Truy cập Mạng lưới Nhà cung cấp",
+    "supply.feature2": "Bán không cần Hàng tồn kho",
+    "supply.feature3": "Tích hợp 3PL",
+    "supply.feature4": "Thực hiện Tự động",
+    "supply.feature5": "Logistics Xuyên biên giới",
+    "supply.feature6": "Đồng bộ Đa kênh",
+    "supply.cta": "Khám phá Hệ thống Cung ứng →",
+    "values.tag": "TẠI SAO TAGOJA",
+    "values.title": "Một Nền tảng, Khả năng Vô hạn",
+    "values.subtitle": "Mọi thứ bạn cần cho thương mại hiện đại, tất cả trong một nơi",
+    "values.global.title": "Phạm vi Toàn cầu",
+    "values.global.description": "Giao dịch tại địa phương hoặc mở rộng toàn cầu. Truy cập thị trường khắp Đông Nam Á và hơn thế nữa.",
+    "values.unified.title": "Cơ sở hạ tầng Thống nhất",
+    "values.unified.description": "Một nền tảng kết nối người mua, người bán, nhà cung cấp và logistics — không còn phân mảnh.",
+    "values.inventory.title": "Rủi ro Hàng tồn kho Bằng không",
+    "values.inventory.description": "Bán toàn cầu mà không cần giữ hàng. Dropshipping tự động xử lý phần còn lại.",
+    "values.secure.title": "Giao dịch An toàn",
+    "values.secure.description": "Thanh toán ký quỹ, đối tác được xác minh và bảo vệ người mua trong mọi giao dịch.",
+    "values.automation.title": "Tự động hóa Hoàn toàn",
+    "values.automation.description": "Từ tìm nguồn sản phẩm đến theo dõi giao hàng — mọi thứ chạy tự động.",
+    "values.scale.title": "Quy mô Vô hạn",
+    "values.scale.description": "Được xây dựng để tăng trưởng. Bắt đầu nhỏ, mở rộng sang hoạt động đa quốc gia một cách liền mạch.",
+    "regions.tag": "MỞ RỘNG TOÀN CẦU",
+    "regions.title": "Bắt đầu tại Đông Nam Á",
+    "regions.subtitle": "Ra mắt từng quốc gia, xây dựng tương lai của thương mại toàn cầu",
+    "regions.status.live": "Đang Hoạt động",
+    "cta.title": "Sẵn sàng Chuyển đổi Doanh nghiệp Của Bạn?",
+    "cta.description": "Dù bạn đang mua sản phẩm đầu tiên hay mở rộng chuỗi cung ứng toàn cầu, TAGOJA có mọi thứ bạn cần để thành công.",
+    "cta.marketplace": "Bắt đầu Giao dịch Ngay",
+    "cta.supply": "Tham gia Mạng lưới Cung ứng",
+    "footer.description": "Hệ sinh thái thương mại toàn cầu hoàn chỉnh. Một nền tảng cho giao dịch, tìm nguồn và thực hiện — kết nối Đông Nam Á với thế giới.",
+    "footer.marketplace.title": "Chợ",
+    "footer.marketplace.browse": "Duyệt Sản phẩm",
+    "footer.marketplace.realestate": "Bất động sản",
+    "footer.marketplace.jobs": "Việc làm",
+    "footer.marketplace.community": "Cộng đồng",
+    "footer.supply.title": "Hệ thống Cung ứng",
+    "footer.supply.suppliers": "Cho Nhà cung cấp",
+    "footer.supply.sellers": "Cho Người bán",
+    "footer.supply.3pl": "Cho 3PL",
+    "footer.supply.partner": "Chương trình Đối tác",
+    "footer.resources.title": "Tài nguyên",
+    "footer.resources.help": "Trung tâm Trợ giúp",
+    "footer.resources.contact": "Liên hệ",
+    "footer.legal.privacy": "Quyền riêng tư",
+    "footer.legal.terms": "Điều khoản",
+    "footer.legal.cookies": "Cookie"
+  },
+  zh: {
+    "nav.marketplace": "市场",
+    "nav.supply": "供应引擎",
+    "nav.regions": "地区",
+    "hero.title1": "完整的",
+    "hero.title2": "全球商务生态系统",
+    "hero.subtitle": "随时随地交易任何商品。在一个统一平台上连接供应商、销售商和物流 — 从本地交易到全球供应链。",
+    "marketplace.tag": "面向买家和卖家",
+    "marketplace.title": "市场",
+    "marketplace.description": "买卖一切 — 从二手物品到新产品，房地产到工作，本地交易到全球B2B贸易。",
+    "marketplace.feature1": "C2C二手交易",
+    "marketplace.feature2": "B2C新产品销售",
+    "marketplace.feature3": "B2B批发和采购",
+    "marketplace.feature4": "房地产列表",
+    "marketplace.feature5": "工作和服务",
+    "marketplace.feature6": "社区论坛",
+    "marketplace.cta": "浏览市场 →",
+    "supply.tag": "面向企业",
+    "supply.title": "供应引擎",
+    "supply.description": "连接供应商、销售商和物流合作伙伴。大规模自动化全球采购、履行和代发货。",
+    "supply.feature1": "访问供应商网络",
+    "supply.feature2": "零库存销售",
+    "supply.feature3": "3PL集成",
+    "supply.feature4": "自动化履行",
+    "supply.feature5": "跨境物流",
+    "supply.feature6": "多渠道同步",
+    "supply.cta": "探索供应引擎 →",
+    "values.tag": "为什么选择TAGOJA",
+    "values.title": "一个平台，无限可能",
+    "values.subtitle": "现代商务所需的一切，全在一处",
+    "values.global.title": "全球覆盖",
+    "values.global.description": "本地交易或全球扩张。访问东南亚及其他地区的市场。",
+    "values.unified.title": "统一基础设施",
+    "values.unified.description": "一个平台连接买家、卖家、供应商和物流 — 不再碎片化。",
+    "values.inventory.title": "零库存风险",
+    "values.inventory.description": "无需持有库存即可全球销售。自动化代发货处理其余事项。",
+    "values.secure.title": "安全交易",
+    "values.secure.description": "托管支付、经验证的合作伙伴以及每笔交易的买家保护。",
+    "values.automation.title": "全面自动化",
+    "values.automation.description": "从产品采购到配送跟踪 — 一切自动运行。",
+    "values.scale.title": "无限扩展",
+    "values.scale.description": "为增长而建。从小规模开始，无缝扩展到多国运营。",
+    "regions.tag": "全球扩张",
+    "regions.title": "从东南亚开始",
+    "regions.subtitle": "逐国推出，构建全球商务的未来",
+    "regions.status.live": "现已上线",
+    "cta.title": "准备好转型您的业务了吗？",
+    "cta.description": "无论您是购买第一件商品还是扩展全球供应链，TAGOJA都具备您成功所需的一切。",
+    "cta.marketplace": "立即开始交易",
+    "cta.supply": "加入供应网络",
+    "footer.description": "完整的全球商务生态系统。一个用于交易、采购和履行的平台 — 将东南亚与世界连接起来。",
+    "footer.marketplace.title": "市场",
+    "footer.marketplace.browse": "浏览产品",
+    "footer.marketplace.realestate": "房地产",
+    "footer.marketplace.jobs": "工作",
+    "footer.marketplace.community": "社区",
+    "footer.supply.title": "供应引擎",
+    "footer.supply.suppliers": "面向供应商",
+    "footer.supply.sellers": "面向销售商",
+    "footer.supply.3pl": "面向3PL",
+    "footer.supply.partner": "合作伙伴计划",
+    "footer.resources.title": "资源",
+    "footer.resources.help": "帮助中心",
+    "footer.resources.contact": "联系",
+    "footer.legal.privacy": "隐私",
+    "footer.legal.terms": "条款",
+    "footer.legal.cookies": "Cookie"
+  },
+  ja: {
+    "nav.marketplace": "マーケットプレイス",
+    "nav.supply": "サプライエンジン",
+    "nav.regions": "地域",
+    "hero.title1": "完全な",
+    "hero.title2": "グローバルコマースエコシステム",
+    "hero.subtitle": "いつでもどこでも何でも取引。サプライヤー、販売者、物流を1つの統合プラットフォームで接続 — 地元の取引からグローバルサプライチェーンまで。",
+    "marketplace.tag": "バイヤー＆セラー向け",
+    "marketplace.title": "マーケットプレイス",
+    "marketplace.description": "すべてを売買 — 中古品から新製品、不動産から仕事、地元の取引からグローバルB2B貿易まで。",
+    "marketplace.feature1": "C2C中古品取引",
+    "marketplace.feature2": "B2C新製品販売",
+    "marketplace.feature3": "B2B卸売と調達",
+    "marketplace.feature4": "不動産リスティング",
+    "marketplace.feature5": "求人とサービス",
+    "marketplace.feature6": "コミュニティフォーラム",
+    "marketplace.cta": "マーケットプレイスを見る →",
+    "supply.tag": "ビジネス向け",
+    "supply.title": "サプライエンジン",
+    "supply.description": "サプライヤー、販売者、物流パートナーを接続。グローバル調達、フルフィルメント、ドロップシッピングを大規模に自動化。",
+    "supply.feature1": "サプライヤーネットワークアクセス",
+    "supply.feature2": "在庫ゼロ販売",
+    "supply.feature3": "3PL統合",
+    "supply.feature4": "自動フルフィルメント",
+    "supply.feature5": "国境を越えた物流",
+    "supply.feature6": "マルチチャネル同期",
+    "supply.cta": "サプライエンジンを探索 →",
+    "values.tag": "なぜTAGOJAなのか",
+    "values.title": "1つのプラットフォーム、無限の可能性",
+    "values.subtitle": "現代のコマースに必要なすべてが1か所に",
+    "values.global.title": "グローバルリーチ",
+    "values.global.description": "地元で取引するか、グローバルに拡大。東南アジアとそれ以降の市場にアクセス。",
+    "values.unified.title": "統合インフラストラクチャ",
+    "values.unified.description": "1つのプラットフォームがバイヤー、セラー、サプライヤー、物流を接続 — もう断片化はありません。",
+    "values.inventory.title": "在庫リスクゼロ",
+    "values.inventory.description": "在庫を持たずにグローバルに販売。自動ドロップシッピングが残りを処理します。",
+    "values.secure.title": "安全な取引",
+    "values.secure.description": "エスクロー決済、検証済みパートナー、すべての取引でバイヤー保護。",
+    "values.automation.title": "完全自動化",
+    "values.automation.description": "製品調達から配送追跡まで — すべてが自動で実行されます。",
+    "values.scale.title": "無限のスケール",
+    "values.scale.description": "成長のために構築。小規模から始め、多国間運営にシームレスに拡大。",
+    "regions.tag": "グローバル展開",
+    "regions.title": "東南アジアから始める",
+    "regions.subtitle": "国ごとに立ち上げ、グローバルコマースの未来を構築",
+    "regions.status.live": "現在稼働中",
+    "cta.title": "ビジネスを変革する準備はできていますか？",
+    "cta.description": "最初のアイテムを購入する場合でも、グローバルサプライチェーンを拡大する場合でも、TAGOJAは成功に必要なすべてを備えています。",
+    "cta.marketplace": "今すぐ取引を開始",
+    "cta.supply": "サプライネットワークに参加",
+    "footer.description": "完全なグローバルコマースエコシステム。取引、調達、フルフィルメントのための1つのプラットフォーム — 東南アジアを世界とつなぐ。",
+    "footer.marketplace.title": "マーケットプレイス",
+    "footer.marketplace.browse": "製品を見る",
+    "footer.marketplace.realestate": "不動産",
+    "footer.marketplace.jobs": "求人",
+    "footer.marketplace.community": "コミュニティ",
+    "footer.supply.title": "サプライエンジン",
+    "footer.supply.suppliers": "サプライヤー向け",
+    "footer.supply.sellers": "販売者向け",
+    "footer.supply.3pl": "3PL向け",
+    "footer.supply.partner": "パートナープログラム",
+    "footer.resources.title": "リソース",
+    "footer.resources.help": "ヘルプセンター",
+    "footer.resources.contact": "お問い合わせ",
+    "footer.legal.privacy": "プライバシー",
+    "footer.legal.terms": "利用規約",
+    "footer.legal.cookies": "Cookie"
+  }
+};
+
+// Current language
+let currentLanguage = 'en';
+
+// Toggle language menu
+function toggleLanguageMenu() {
+  const selector = document.getElementById('languageSelector');
+  selector.classList.toggle('active');
+}
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+  const selector = document.getElementById('languageSelector');
+  if (selector && !selector.contains(event.target)) {
+    selector.classList.remove('active');
+  }
+});
+
+// Change language
+function changeLanguage(lang, flag, name) {
+  currentLanguage = lang;
+  
+  // Update button
+  document.getElementById('currentFlag').textContent = flag;
+  document.getElementById('currentLang').textContent = name;
+  
+  // Update all text
+  const elements = document.querySelectorAll('[data-i18n]');
+  elements.forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[lang] && translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+  
+  // Close menu
+  document.getElementById('languageSelector').classList.remove('active');
+  
+  // Save preference
+  localStorage.setItem('preferred-language', lang);
+}
+
+// Load saved language on page load
+window.addEventListener('DOMContentLoaded', function() {
+  const savedLang = localStorage.getItem('preferred-language');
+  if (savedLang && translations[savedLang]) {
+    const langMap = {
+      'en': { flag: '🇬🇧', name: 'EN' },
+      'ko': { flag: '🇰🇷', name: '한국어' },
+      'tl': { flag: '🇵🇭', name: 'Tagalog' },
+      'id': { flag: '🇮🇩', name: 'Bahasa' },
+      'th': { flag: '🇹🇭', name: 'ไทย' },
+      'vi': { flag: '🇻🇳', name: 'Tiếng Việt' },
+      'zh': { flag: '🇨🇳', name: '中文' },
+      'ja': { flag: '🇯🇵', name: '日本語' }
+    };
+    
+    if (langMap[savedLang]) {
+      changeLanguage(savedLang, langMap[savedLang].flag, langMap[savedLang].name);
+    }
+  }
+});
+</script>
+
+</body>
+</html>
