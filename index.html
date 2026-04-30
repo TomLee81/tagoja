@@ -115,6 +115,8 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      text-decoration: none;
+      cursor: pointer;
     }
 
     .nav-wrapper {
@@ -781,7 +783,7 @@
 <header>
   <div class="container">
     <div class="header-content">
-      <div class="logo">TAGOJA</div>
+      <a href="#" class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">TAGOJA</a>
       <div class="nav-wrapper">
         <div class="nav-menu">
           <a href="https://market.tagoja.com" class="nav-marketplace" data-i18n="nav.marketplace">Marketplace</a>
