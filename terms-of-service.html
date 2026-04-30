@@ -1,778 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service | TAGOJA</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | TAGOJA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #cbd5e1;
-            line-height: 1.7;
-            font-size: 16px;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
 
-        /* NAV HEADER */
-        .nav-header {
-            padding: 16px 0;
-            border-bottom: 1px solid #e5e7eb;
-            background: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .nav-header .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 0;
+    }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .nav-logo {
-            font-size: 28px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            cursor: pointer;
-        }
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
 
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+    .back-link {
+      color: #6b7280;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
 
-        .nav-menu a {
-            padding: 8px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.2s;
-            color: #4b5563;
-        }
+    .back-link:hover {
+      color: #f97316;
+    }
 
-        .nav-menu a:hover {
-            background: #f3f4f6;
-            color: #1a1a1a;
-        }
+    .hero {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
 
-        .page-header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-        }
+    .hero p {
+      font-size: 16px;
+      color: #cbd5e1;
+    }
 
-        .logo {
-            font-size: 32px;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 16px;
-            letter-spacing: 0.5px;
-        }
+    .content {
+      padding: 80px 20px;
+    }
 
-        .company {
-            font-size: 14px;
-            color: #94a3b8;
-            margin-bottom: 8px;
-        }
+    .content h2 {
+      font-size: 28px;
+      font-weight: 900;
+      margin-top: 48px;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
 
-        h1 {
-            font-size: 42px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
+    .content h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      color: #374151;
+    }
 
-        .meta {
-            font-size: 14px;
-            color: #64748b;
-        }
+    .content p {
+      margin-bottom: 16px;
+      color: #4b5563;
+    }
 
-        h2 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-top: 48px;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
-        }
+    .content ul, .content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      color: #4b5563;
+    }
 
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #e2e8f0;
-            margin-top: 32px;
-            margin-bottom: 16px;
-        }
+    .content li {
+      margin-bottom: 8px;
+    }
 
-        h4 {
-            font-size: 18px;
-            font-weight: 600;
-            color: #cbd5e1;
-            margin-top: 24px;
-            margin-bottom: 12px;
-        }
+    .content strong {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
 
-        p {
-            margin-bottom: 16px;
-            color: #cbd5e1;
-        }
+    .highlight-box {
+      background: #fee2e2;
+      border-left: 4px solid #dc2626;
+      padding: 20px;
+      margin: 32px 0;
+      border-radius: 8px;
+    }
 
-        ul, ol {
-            margin: 16px 0 16px 24px;
-        }
+    .highlight-box p {
+      color: #7f1d1d;
+      font-weight: 500;
+    }
 
-        li {
-            margin-bottom: 8px;
-            color: #cbd5e1;
-        }
+    .info-box {
+      background: #dbeafe;
+      border-left: 4px solid #3b82f6;
+      padding: 20px;
+      margin: 32px 0;
+      border-radius: 8px;
+    }
 
-        a {
-            color: #3b82f6;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+    .info-box p {
+      color: #1e3a8a;
+      font-weight: 500;
+    }
 
-        a:hover {
-            color: #60a5fa;
-            text-decoration: underline;
-        }
+    footer {
+      background: #0f172a;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-        strong {
-            color: #f1f5f9;
-            font-weight: 600;
-        }
+    footer p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
 
-        .section {
-            margin-bottom: 40px;
-        }
+    footer a {
+      color: #f97316;
+      text-decoration: none;
+    }
 
-        .highlight-box {
-            background: rgba(239, 68, 68, 0.1);
-            border-left: 4px solid #ef4444;
-            padding: 20px;
-            margin: 24px 0;
-            border-radius: 4px;
-        }
-
-        .info-box {
-            background: rgba(59, 130, 246, 0.1);
-            border-left: 4px solid #3b82f6;
-            padding: 20px;
-            margin: 24px 0;
-            border-radius: 4px;
-        }
-
-        .contact-box {
-            background: rgba(148, 163, 184, 0.05);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            padding: 32px;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
-
-        .contact-box p {
-            margin-bottom: 12px;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(148, 163, 184, 0.1);
-            text-align: center;
-            color: #64748b;
-            font-size: 14px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 32px;
-            color: #3b82f6;
-            font-size: 14px;
-        }
-
-        .back-link:hover {
-            color: #60a5fa;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 20px;
-            }
-
-            h1 {
-                font-size: 32px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
-        }
-    </style>
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <!-- NAVIGATION HEADER -->
-    <div class="nav-header">
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="nav-logo">TAGOJA</a>
-                <div class="nav-menu">
-                    <a href="https://market.tagoja.com">Marketplace</a>
-                    <a href="/#supply">Supply Engine</a>
-                    <a href="/#regions">Regions</a>
-                </div>
-            </div>
-        </div>
+
+<header>
+  <div class="header-content">
+    <a href="../tagoja-multilang.html" class="logo">TAGOJA</a>
+    <a href="../tagoja-multilang.html" class="back-link">← Back to Home</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Terms of Service</h1>
+    <p>Last updated: April 28, 2026</p>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    
+    <div class="highlight-box">
+      <p><strong>Important:</strong> By using TAGOJA, you agree to these terms. Please read them carefully. If you don't agree, please don't use our services.</p>
     </div>
 
-    <div class="container">
-        <a href="/" class="back-link">← Back to Home</a>
-        
-        <header class="page-header">
-            <div class="logo">TAGOJA</div>
-            <div class="company">Operated by SEOWOO LLC</div>
-            <h1>Terms of Service</h1>
-            <div class="meta">
-                Effective Date: May 1, 2026 | Last Updated: May 1, 2026
-            </div>
-        </header>
-
-        <div class="section">
-            <p>Welcome to TAGOJA, a brand operated by SEOWOO LLC. These Terms of Service ("Terms") govern your use of the TAGOJA platform, including the Marketplace and Supply Engine services.</p>
-        </div>
-
-        <div class="section">
-            <h2>1. Acceptance of Terms</h2>
-            <p>By accessing or using TAGOJA, you agree to be bound by these Terms. If you do not agree, do not use our services.</p>
-
-            <h3>1.1 Who Can Use TAGOJA</h3>
-            <ul>
-                <li><strong>Age Requirement:</strong> You must be at least 18 years old</li>
-                <li><strong>Legal Capacity:</strong> You must have the legal capacity to enter contracts</li>
-                <li><strong>Business Users:</strong> You represent that you have authority to bind your business</li>
-                <li><strong>Prohibited Users:</strong> We may refuse service to anyone at our discretion</li>
-            </ul>
-
-            <h3>1.2 Changes to Terms</h3>
-            <ul>
-                <li>We may modify these Terms at any time</li>
-                <li>Changes become effective upon posting</li>
-                <li>Continued use constitutes acceptance</li>
-                <li>Material changes will be notified via email or platform notification</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>2. TAGOJA Services</h2>
-
-            <h3>2.1 Marketplace Services</h3>
-            <p>Our Marketplace enables:</p>
-            <ul>
-                <li>C2C secondhand trading</li>
-                <li>B2C new product sales</li>
-                <li>B2B wholesale & sourcing</li>
-                <li>Real estate listings</li>
-                <li>Jobs & services</li>
-                <li>Community forums and discussions</li>
-            </ul>
-
-            <h3>2.2 Supply Engine Services</h3>
-            <p>Our Supply Engine provides:</p>
-            <ul>
-                <li>Supplier network access</li>
-                <li>Dropshipping and fulfillment</li>
-                <li>3PL logistics integration</li>
-                <li>Multi-channel inventory sync</li>
-                <li>Cross-border trade facilitation</li>
-                <li>Automated order processing</li>
-            </ul>
-
-            <h3>2.3 Service Availability</h3>
-            <ul>
-                <li>Services may be unavailable due to maintenance, upgrades, or technical issues</li>
-                <li>We do not guarantee uninterrupted access</li>
-                <li>Features may vary by region</li>
-                <li>We reserve the right to modify or discontinue services</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>3. Account Registration and Security</h2>
-
-            <h3>3.1 Account Creation</h3>
-            <ul>
-                <li>Provide accurate, current, and complete information</li>
-                <li>One account per user/business</li>
-                <li>Verify your email address and phone number</li>
-                <li>Complete identity verification when required</li>
-            </ul>
-
-            <h3>3.2 Account Security</h3>
-            <ul>
-                <li>You are responsible for maintaining account security</li>
-                <li>Use a strong, unique password</li>
-                <li>Do not share your account credentials</li>
-                <li>Notify us immediately of unauthorized access</li>
-                <li>Enable two-factor authentication when available</li>
-            </ul>
-
-            <h3>3.3 Account Suspension and Termination</h3>
-            <p>We may suspend or terminate accounts for:</p>
-            <ul>
-                <li>Violation of these Terms</li>
-                <li>Fraudulent activity</li>
-                <li>Illegal conduct</li>
-                <li>Abuse or harassment</li>
-                <li>Non-payment</li>
-                <li>Inactivity (after notice)</li>
-            </ul>
-            <p>You may terminate your account at any time through account settings.</p>
-        </div>
-
-        <div class="section">
-            <h2>4. User Conduct and Prohibited Activities</h2>
-
-            <h3>4.1 Acceptable Use</h3>
-            <p>You agree to:</p>
-            <ul>
-                <li>Comply with all applicable laws and regulations</li>
-                <li>Provide accurate information</li>
-                <li>Honor your commitments and transactions</li>
-                <li>Treat other users with respect</li>
-                <li>Respond promptly to inquiries</li>
-            </ul>
-
-            <h3>4.2 Prohibited Activities</h3>
-            <p>You may NOT:</p>
-
-            <h4>Illegal Activities:</h4>
-            <ul>
-                <li>Sell illegal, stolen, or counterfeit goods</li>
-                <li>Violate intellectual property rights</li>
-                <li>Engage in fraud or scams</li>
-                <li>Launder money or evade taxes</li>
-                <li>Violate export/import regulations</li>
-            </ul>
-
-            <h4>Platform Abuse:</h4>
-            <ul>
-                <li>Create fake accounts or manipulate ratings</li>
-                <li>Spam, harass, or threaten users</li>
-                <li>Scrape, copy, or steal platform data</li>
-                <li>Bypass security measures</li>
-                <li>Use automated bots without permission</li>
-            </ul>
-
-            <h4>Prohibited Items:</h4>
-            <ul>
-                <li>Weapons, drugs, or dangerous materials</li>
-                <li>Counterfeit or unauthorized goods</li>
-                <li>Adult content or services (except where legally permitted and disclosed)</li>
-                <li>Human trafficking or exploitation</li>
-                <li>Regulated items without proper licensing</li>
-            </ul>
-
-            <h4>Unfair Practices:</h4>
-            <ul>
-                <li>Price manipulation or bid rigging</li>
-                <li>False advertising or misrepresentation</li>
-                <li>Review manipulation or fake feedback</li>
-                <li>Discrimination based on protected characteristics</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>5. Listings and Content</h2>
-
-            <h3>5.1 Creating Listings</h3>
-            <p>When creating listings, you must:</p>
-            <ul>
-                <li>Provide accurate descriptions</li>
-                <li>Use your own photos or properly licensed images</li>
-                <li>Set fair and honest pricing</li>
-                <li>Disclose all material defects or conditions</li>
-                <li>Comply with category-specific rules</li>
-                <li>Have the right to sell the item</li>
-            </ul>
-
-            <h3>5.2 Content Ownership</h3>
-            <ul>
-                <li>You retain ownership of your content</li>
-                <li>You grant TAGOJA a license to display, distribute, and promote your content</li>
-                <li>This license continues until you delete the content</li>
-                <li>Some metadata may be retained for analytics</li>
-            </ul>
-
-            <h3>5.3 Content Standards</h3>
-            <p>All content must:</p>
-            <ul>
-                <li>Be accurate and not misleading</li>
-                <li>Not violate intellectual property rights</li>
-                <li>Not contain harmful or illegal material</li>
-                <li>Not be discriminatory or offensive</li>
-                <li>Comply with advertising and marketing laws</li>
-            </ul>
-
-            <h3>5.4 Content Removal</h3>
-            <p>We may remove content that:</p>
-            <ul>
-                <li>Violates these Terms</li>
-                <li>Violates applicable laws</li>
-                <li>Is reported by users</li>
-                <li>Poses safety or security risks</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>6. Transactions and Payments</h2>
-
-            <h3>6.1 Buyer Obligations</h3>
-            <p>Buyers agree to:</p>
-            <ul>
-                <li>Pay the stated price plus applicable fees</li>
-                <li>Provide accurate shipping information</li>
-                <li>Complete purchases in good faith</li>
-                <li>Communicate promptly with sellers</li>
-                <li>Resolve disputes reasonably</li>
-            </ul>
-
-            <h3>6.2 Seller Obligations</h3>
-            <p>Sellers agree to:</p>
-            <ul>
-                <li>Honor all sales and listings</li>
-                <li>Ship items promptly as described</li>
-                <li>Provide tracking information</li>
-                <li>Respond to buyer inquiries</li>
-                <li>Process refunds when required</li>
-            </ul>
-
-            <h3>6.3 Payment Processing</h3>
-            <ul>
-                <li>We use third-party payment processors</li>
-                <li>Payment terms are set by individual sellers and platform policies</li>
-                <li>We may hold funds in escrow for security</li>
-                <li>Refunds are processed according to our Refund Policy</li>
-                <li>Transaction fees apply (see Fee Schedule)</li>
-            </ul>
-
-            <h3>6.4 Taxes</h3>
-            <ul>
-                <li>You are responsible for all applicable taxes</li>
-                <li>We may collect and remit taxes where required by law</li>
-                <li>Sellers must comply with tax reporting requirements</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>7. Supply Engine Specific Terms</h2>
-
-            <h3>7.1 Suppliers</h3>
-            <p>Suppliers agree to:</p>
-            <ul>
-                <li>Provide accurate product information and inventory</li>
-                <li>Fulfill orders within agreed timeframes</li>
-                <li>Maintain product quality standards</li>
-                <li>Honor pricing commitments</li>
-                <li>Comply with export/import regulations</li>
-            </ul>
-
-            <h3>7.2 Sellers/Resellers</h3>
-            <p>Sellers agree to:</p>
-            <ul>
-                <li>Not resell below minimum advertised price (if applicable)</li>
-                <li>Maintain brand guidelines</li>
-                <li>Provide customer service to end buyers</li>
-                <li>Handle returns and refunds per supplier agreements</li>
-                <li>Pay supplier invoices on time</li>
-            </ul>
-
-            <h3>7.3 Logistics Partners (3PL)</h3>
-            <p>3PL partners agree to:</p>
-            <ul>
-                <li>Meet shipping and delivery timelines</li>
-                <li>Provide tracking and updates</li>
-                <li>Handle goods with care</li>
-                <li>Maintain insurance coverage</li>
-                <li>Comply with customs and regulatory requirements</li>
-            </ul>
-
-            <h3>7.4 Dropshipping and Fulfillment</h3>
-            <ul>
-                <li>We facilitate automated order routing</li>
-                <li>Suppliers fulfill orders on behalf of sellers</li>
-                <li>Sellers are responsible for customer satisfaction</li>
-                <li>Disputes are resolved per platform policies</li>
-                <li>Commission and fee structures apply</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>8. Intellectual Property</h2>
-
-            <h3>8.1 TAGOJA IP</h3>
-            <ul>
-                <li>TAGOJA trademarks, logos, and branding are our property</li>
-                <li>Platform code, design, and features are protected</li>
-                <li>You may not copy, modify, or reverse engineer our platform</li>
-                <li>Limited use of our marks is permitted for promotion (with approval)</li>
-            </ul>
-
-            <h3>8.2 User IP</h3>
-            <ul>
-                <li>You warrant you own or have rights to content you post</li>
-                <li>You indemnify us against IP infringement claims</li>
-                <li>Report IP violations to: support@tagoja.com</li>
-            </ul>
-
-            <h3>8.3 DMCA and Takedowns</h3>
-            <ul>
-                <li>We comply with copyright laws</li>
-                <li>To report infringement: support@tagoja.com</li>
-                <li>Counter-notice procedures available</li>
-                <li>Repeat infringers will be terminated</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>9. Fees and Payments</h2>
-
-            <h3>9.1 Platform Fees</h3>
-            <p><strong>Marketplace Fees:</strong></p>
-            <ul>
-                <li>Listing fees: Free (basic) or premium tiers available</li>
-                <li>Transaction fees: [X]% of sale price</li>
-                <li>Payment processing: [X]% + fixed fee</li>
-            </ul>
-
-            <p><strong>Supply Engine Fees:</strong></p>
-            <ul>
-                <li>Supplier listing: Free or subscription tiers</li>
-                <li>Commission on sales: [X]% of wholesale price</li>
-                <li>Dropshipping fee: [X] per order</li>
-                <li>3PL integration: Custom pricing</li>
-            </ul>
-
-            <p>See our Fee Schedule for details: <a href="https://tagoja.com/fees">https://tagoja.com/fees</a></p>
-
-            <h3>9.2 Payment Terms</h3>
-            <ul>
-                <li>Fees are charged at time of transaction</li>
-                <li>Subscription fees are billed monthly/annually</li>
-                <li>No refunds for platform fees (except as required by law)</li>
-                <li>We reserve the right to change fees with 30 days notice</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>10. Disputes and Resolution</h2>
-
-            <h3>10.1 User Disputes</h3>
-            <p>For disputes with other users:</p>
-            <ul>
-                <li>Communicate directly first</li>
-                <li>Use our Resolution Center for assistance</li>
-                <li>Provide evidence (photos, messages, tracking)</li>
-                <li>We may mediate but are not obligated to resolve</li>
-                <li>Platform decisions are final</li>
-            </ul>
-
-            <h3>10.2 Refund and Return Policies</h3>
-            <ul>
-                <li>Sellers set their own return policies</li>
-                <li>Marketplace standard: 7-day return for defective items</li>
-                <li>Supply Engine: Returns handled per supplier agreements</li>
-                <li>Refunds processed within 7-14 business days</li>
-            </ul>
-
-            <h3>10.3 Chargebacks</h3>
-            <ul>
-                <li>Chargebacks may result in account suspension</li>
-                <li>Provide evidence to dispute chargebacks</li>
-                <li>Excessive chargebacks may lead to termination</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>11. Disclaimers and Limitations of Liability</h2>
-
-            <div class="highlight-box">
-                <h3>11.1 Platform Disclaimer</h3>
-                <p>TAGOJA IS PROVIDED "AS IS" WITHOUT WARRANTIES:</p>
-                <ul>
-                    <li>We do not guarantee accuracy of listings</li>
-                    <li>We do not verify all user-provided information</li>
-                    <li>We are not responsible for user conduct or transactions</li>
-                    <li>We do not guarantee specific results or outcomes</li>
-                </ul>
-            </div>
-
-            <h3>11.2 Third-Party Services</h3>
-            <ul>
-                <li>We are not liable for third-party service failures</li>
-                <li>Payment processors, shipping, and logistics are independent</li>
-                <li>External links are not our responsibility</li>
-            </ul>
-
-            <h3>11.3 Limitation of Liability</h3>
-            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
-            <ul>
-                <li>Our liability is limited to fees paid in the past 12 months</li>
-                <li>We are not liable for indirect, consequential, or punitive damages</li>
-                <li>We are not liable for lost profits, data, or opportunities</li>
-                <li>Some jurisdictions do not allow limitations, so these may not apply</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>12. Indemnification</h2>
-            <p>You agree to indemnify and hold TAGOJA harmless from:</p>
-            <ul>
-                <li>Your violation of these Terms</li>
-                <li>Your violation of laws or regulations</li>
-                <li>Intellectual property infringement claims</li>
-                <li>Your conduct or content on the platform</li>
-                <li>Third-party claims arising from your use</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>13. Privacy and Data</h2>
-            <ul>
-                <li>Our <a href="/privacy-policy">Privacy Policy</a> governs data collection and use</li>
-                <li>By using TAGOJA, you consent to our data practices</li>
-                <li>We comply with GDPR, CCPA, and local laws</li>
-                <li>You are responsible for compliance with data laws when collecting user data</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>14. International Use</h2>
-
-            <h3>14.1 Global Platform</h3>
-            <ul>
-                <li>TAGOJA operates across multiple countries</li>
-                <li>You must comply with local laws in your jurisdiction</li>
-                <li>Cross-border transactions subject to customs and duties</li>
-                <li>Currency conversions may apply</li>
-            </ul>
-
-            <h3>14.2 Export Controls</h3>
-            <ul>
-                <li>Comply with export/import regulations</li>
-                <li>Do not export to sanctioned countries</li>
-                <li>Obtain required licenses and permits</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>15. Termination</h2>
-
-            <h3>15.1 By You</h3>
-            <ul>
-                <li>You may close your account at any time</li>
-                <li>Outstanding obligations must be fulfilled</li>
-                <li>Some data may be retained per our Privacy Policy</li>
-            </ul>
-
-            <h3>15.2 By Us</h3>
-            <p>We may terminate your access:</p>
-            <ul>
-                <li>Immediately for serious violations</li>
-                <li>With notice for other breaches</li>
-                <li>At our discretion with or without cause</li>
-                <li>Due to legal requirements</li>
-            </ul>
-
-            <h3>15.3 Effect of Termination</h3>
-            <ul>
-                <li>Access to services ends immediately</li>
-                <li>Outstanding fees remain due</li>
-                <li>License to your content terminates</li>
-                <li>Survival clauses continue to apply</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>16. Miscellaneous</h2>
-
-            <h3>16.1 Governing Law</h3>
-            <ul>
-                <li>These Terms are governed by Wyoming law</li>
-                <li>Disputes subject to exclusive jurisdiction of Wyoming courts</li>
-                <li>For EU users: Consumer protection laws apply</li>
-            </ul>
-
-            <h3>16.2 Arbitration (where applicable)</h3>
-            <ul>
-                <li>Disputes may be subject to binding arbitration</li>
-                <li>Class action waiver applies where permitted</li>
-                <li>Small claims court option available</li>
-            </ul>
-
-            <h3>16.3 Severability</h3>
-            <p>If any provision is invalid, the rest remains in effect</p>
-
-            <h3>16.4 Assignment</h3>
-            <ul>
-                <li>You may not assign these Terms</li>
-                <li>We may assign to affiliates or in business transfers</li>
-            </ul>
-
-            <h3>16.5 Entire Agreement</h3>
-            <p>These Terms, Privacy Policy, and incorporated policies constitute the entire agreement</p>
-
-            <h3>16.6 Waiver</h3>
-            <p>Our failure to enforce any right does not constitute a waiver</p>
-
-            <h3>16.7 Force Majeure</h3>
-            <p>We are not liable for delays due to circumstances beyond our control</p>
-        </div>
-
-        <div class="contact-box">
-            <h2>17. Contact Information</h2>
-            <p><strong>Email:</strong> <a href="mailto:support@tagoja.com">support@tagoja.com</a></p>
-            <p><strong>Mailing Address:</strong><br>
-            TAGOJA c/o SEOWOO LLC<br>
-            30 N Gould St<br>
-            Sheridan, WY 82801<br>
-            United States</p>
-        </div>
-
-        <footer>
-            <p><strong>By using TAGOJA, you agree to these Terms. Read them carefully.</strong></p>
-            <p style="margin-top: 20px;">© 2026 TAGOJA by SEOWOO LLC. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | <a href="cookie-policy.html">Cookie Policy</a></p>
-        </footer>
+    <h2>1. Agreement to Terms</h2>
+    <p>These Terms of Service ("Terms") govern your access to and use of TAGOJA's services, including our Marketplace, Supply Engine, mobile applications, and websites (collectively, the "Services"). By creating an account or using our Services, you agree to be bound by these Terms and our Privacy Policy.</p>
+
+    <h2>2. Eligibility</h2>
+    <p>To use TAGOJA, you must:</p>
+    <ul>
+      <li>Be at least 18 years old (or the age of majority in your jurisdiction)</li>
+      <li>Have the legal capacity to enter into binding contracts</li>
+      <li>Not be prohibited from using our Services under applicable laws</li>
+      <li>Provide accurate, current, and complete information during registration</li>
+      <li>Not have been previously banned from TAGOJA</li>
+    </ul>
+
+    <h2>3. Account Registration and Security</h2>
+
+    <h3>3.1 Account Creation</h3>
+    <p>You're responsible for:</p>
+    <ul>
+      <li>Maintaining the confidentiality of your password</li>
+      <li>All activities that occur under your account</li>
+      <li>Notifying us immediately of unauthorized access</li>
+      <li>Ensuring your account information is accurate and up-to-date</li>
+    </ul>
+
+    <h3>3.2 Account Types</h3>
+    <ul>
+      <li><strong>Personal Accounts:</strong> For individual buyers and sellers</li>
+      <li><strong>Business Accounts:</strong> For companies using Marketplace</li>
+      <li><strong>Supplier Accounts:</strong> For suppliers on Supply Engine</li>
+      <li><strong>Seller Accounts:</strong> For sellers using Supply Engine</li>
+      <li><strong>3PL Accounts:</strong> For logistics partners</li>
+    </ul>
+
+    <h3>3.3 Account Verification</h3>
+    <p>We may require identity verification for certain activities, including:</p>
+    <ul>
+      <li>Making or receiving payments above certain thresholds</li>
+      <li>Listing high-value items</li>
+      <li>Joining Supply Engine as a partner</li>
+      <li>Accessing business features</li>
+    </ul>
+
+    <h2>4. Marketplace Rules</h2>
+
+    <h3>4.1 Prohibited Items</h3>
+    <p>You may not list or sell:</p>
+    <ul>
+      <li>Illegal items or services</li>
+      <li>Weapons, explosives, or hazardous materials</li>
+      <li>Counterfeit or stolen goods</li>
+      <li>Drugs or drug paraphernalia</li>
+      <li>Adult content or services</li>
+      <li>Items that infringe intellectual property rights</li>
+      <li>Living animals (with some exceptions for certified pet sellers)</li>
+      <li>Human body parts or fluids</li>
+      <li>Items requiring special licenses without proper documentation</li>
+    </ul>
+
+    <h3>4.2 Listing Requirements</h3>
+    <p>All listings must:</p>
+    <ul>
+      <li>Accurately describe the item or service</li>
+      <li>Include clear, honest photos (no stock photos unless disclosed)</li>
+      <li>State the correct condition (new, used, refurbished)</li>
+      <li>Provide accurate pricing and availability</li>
+      <li>Comply with applicable laws and regulations</li>
+    </ul>
+
+    <h3>4.3 Seller Obligations</h3>
+    <ul>
+      <li>Ship items within the stated timeframe</li>
+      <li>Package items securely to prevent damage</li>
+      <li>Respond to buyer inquiries within 24 hours</li>
+      <li>Honor the listing price and description</li>
+      <li>Provide accurate tracking information</li>
+      <li>Accept returns according to our return policy</li>
+    </ul>
+
+    <h3>4.4 Buyer Obligations</h3>
+    <ul>
+      <li>Pay for items promptly</li>
+      <li>Provide accurate shipping information</li>
+      <li>Inspect items upon delivery</li>
+      <li>Report issues within 7 days of delivery</li>
+      <li>Leave honest, fair reviews</li>
+    </ul>
+
+    <h2>5. Payments and Fees</h2>
+
+    <h3>5.1 Marketplace Fees</h3>
+    <ul>
+      <li><strong>Listing Fee:</strong> Free (subject to change)</li>
+      <li><strong>Transaction Fee:</strong> 2-5% of final sale price (varies by category)</li>
+      <li><strong>Payment Processing:</strong> 2.9% + fixed fee (charged by payment provider)</li>
+      <li><strong>Currency Conversion:</strong> 1-3% for international transactions</li>
+    </ul>
+
+    <h3>5.2 Supply Engine Fees</h3>
+    <ul>
+      <li><strong>Supplier Fee:</strong> Tiered monthly subscription ($99-$999/month)</li>
+      <li><strong>Seller Fee:</strong> Per-order fulfillment fee (varies by product)</li>
+      <li><strong>3PL Fee:</strong> Commission on fulfilled orders (5-10%)</li>
+    </ul>
+
+    <h3>5.3 Escrow Protection</h3>
+    <p>All Marketplace transactions use escrow:</p>
+    <ul>
+      <li>Payment is held until buyer confirms receipt</li>
+      <li>Funds released to seller 3 days after confirmation</li>
+      <li>Disputes must be opened within 7 days of delivery</li>
+      <li>Escrow fee: included in transaction fee</li>
+    </ul>
+
+    <h3>5.4 Refunds and Chargebacks</h3>
+    <p>Refund eligibility:</p>
+    <ul>
+      <li>Item not received</li>
+      <li>Item significantly not as described</li>
+      <li>Item damaged in shipping (if not seller's fault, insurance applies)</li>
+      <li>Seller cancels order</li>
+    </ul>
+
+    <h2>6. Supply Engine Terms</h2>
+
+    <h3>6.1 Supplier Requirements</h3>
+    <ul>
+      <li>Valid business registration</li>
+      <li>Product liability insurance</li>
+      <li>Quality control processes</li>
+      <li>Minimum order fulfillment rate: 95%</li>
+      <li>Maximum order cancellation rate: 2%</li>
+    </ul>
+
+    <h3>6.2 Seller Requirements</h3>
+    <ul>
+      <li>Verified business account</li>
+      <li>Compliance with supplier terms</li>
+      <li>Proper product categorization</li>
+      <li>Accurate inventory sync</li>
+    </ul>
+
+    <h3>6.3 3PL Partner Requirements</h3>
+    <ul>
+      <li>Liability insurance coverage</li>
+      <li>Warehouse safety certifications</li>
+      <li>API integration capability</li>
+      <li>Minimum service level agreement (SLA): 98% on-time delivery</li>
+    </ul>
+
+    <h2>7. Intellectual Property</h2>
+
+    <h3>7.1 TAGOJA's IP</h3>
+    <p>All content, trademarks, and intellectual property on TAGOJA are owned by us or our licensors. You may not:</p>
+    <ul>
+      <li>Copy, modify, or distribute our content</li>
+      <li>Use our trademarks without permission</li>
+      <li>Reverse engineer our software</li>
+      <li>Create derivative works</li>
+    </ul>
+
+    <h3>7.2 Your Content</h3>
+    <p>You retain ownership of content you post, but you grant TAGOJA:</p>
+    <ul>
+      <li>A worldwide, royalty-free license to use, display, and distribute your content</li>
+      <li>The right to use your content for promotional purposes</li>
+      <li>Permission to modify content for technical compatibility</li>
+    </ul>
+
+    <h3>7.3 Copyright Infringement</h3>
+    <p>If you believe content infringes your copyright, contact our DMCA agent at dmca@tagoja.com with:</p>
+    <ul>
+      <li>Identification of the copyrighted work</li>
+      <li>Location of the infringing content</li>
+      <li>Your contact information</li>
+      <li>A statement of good faith belief</li>
+      <li>Your physical or electronic signature</li>
+    </ul>
+
+    <h2>8. Prohibited Conduct</h2>
+    <p>You may not:</p>
+    <ul>
+      <li>Violate any laws or regulations</li>
+      <li>Harass, abuse, or threaten other users</li>
+      <li>Manipulate prices or engage in price fixing</li>
+      <li>Create fake reviews or ratings</li>
+      <li>Use bots or automated tools without permission</li>
+      <li>Scrape or harvest data from our platform</li>
+      <li>Interfere with the proper functioning of the Services</li>
+      <li>Circumvent security measures</li>
+      <li>Impersonate others or provide false information</li>
+      <li>Engage in money laundering or fraud</li>
+    </ul>
+
+    <h2>9. Disputes and Resolution</h2>
+
+    <h3>9.1 User Disputes</h3>
+    <p>For disputes between users:</p>
+    <ol>
+      <li>Communicate directly through TAGOJA chat</li>
+      <li>If unresolved, open a formal dispute within 7 days</li>
+      <li>Provide evidence (photos, messages, tracking info)</li>
+      <li>TAGOJA mediates and makes a binding decision</li>
+      <li>Decisions are final unless there's new evidence</li>
+    </ol>
+
+    <h3>9.2 Arbitration Agreement</h3>
+    <p>For disputes with TAGOJA, you agree to binding arbitration instead of court litigation, except for:</p>
+    <ul>
+      <li>Small claims court matters</li>
+      <li>Intellectual property disputes</li>
+      <li>Claims that can't be arbitrated by law</li>
+    </ul>
+
+    <h3>9.3 Class Action Waiver</h3>
+    <p>You agree to resolve disputes individually and waive the right to participate in class actions.</p>
+
+    <h2>10. Termination</h2>
+
+    <h3>10.1 By You</h3>
+    <p>You may close your account at any time through account settings. Outstanding obligations remain.</p>
+
+    <h3>10.2 By TAGOJA</h3>
+    <p>We may suspend or terminate your account for:</p>
+    <ul>
+      <li>Violation of these Terms</li>
+      <li>Fraudulent or illegal activity</li>
+      <li>Excessive disputes or chargebacks</li>
+      <li>Inactivity for 2+ years</li>
+      <li>Risk to platform integrity or user safety</li>
+    </ul>
+
+    <h3>10.3 Effect of Termination</h3>
+    <ul>
+      <li>Access to Services immediately revoked</li>
+      <li>Pending transactions will be completed</li>
+      <li>Funds held for 90 days to cover potential claims</li>
+      <li>Your content may be retained for legal purposes</li>
+    </ul>
+
+    <h2>11. Disclaimers and Limitations of Liability</h2>
+
+    <h3>11.1 No Warranties</h3>
+    <div class="info-box">
+      <p><strong>SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE".</strong> We make no warranties about reliability, accuracy, or fitness for a particular purpose. We don't guarantee that Services will be uninterrupted or error-free.</p>
     </div>
+
+    <h3>11.2 Third-Party Content</h3>
+    <p>TAGOJA is not responsible for:</p>
+    <ul>
+      <li>Accuracy of user listings or descriptions</li>
+      <li>Quality or safety of items sold</li>
+      <li>Actions of buyers, sellers, or partners</li>
+      <li>Third-party services or websites</li>
+    </ul>
+
+    <h3>11.3 Limitation of Liability</h3>
+    <div class="info-box">
+      <p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</strong> TAGOJA is not liable for indirect, incidental, consequential, or punitive damages. Our total liability is limited to the fees you paid to TAGOJA in the 12 months before the claim or $500, whichever is greater.</p>
+    </div>
+
+    <h2>12. Indemnification</h2>
+    <p>You agree to indemnify and hold TAGOJA harmless from claims arising from:</p>
+    <ul>
+      <li>Your violation of these Terms</li>
+      <li>Your content or listings</li>
+      <li>Your violation of others' rights</li>
+      <li>Your use of the Services</li>
+    </ul>
+
+    <h2>13. Changes to Terms</h2>
+    <p>We may modify these Terms at any time. We'll notify you of material changes via:</p>
+    <ul>
+      <li>Email to your registered address</li>
+      <li>In-app notification</li>
+      <li>Prominent notice on our website</li>
+    </ul>
+    <p>Continued use after changes constitutes acceptance. If you don't agree, stop using the Services and close your account.</p>
+
+    <h2>14. General Provisions</h2>
+
+    <h3>14.1 Governing Law</h3>
+    <p>These Terms are governed by the laws of the Philippines, without regard to conflict of law principles.</p>
+
+    <h3>14.2 Severability</h3>
+    <p>If any provision is found unenforceable, the remaining provisions remain in effect.</p>
+
+    <h3>14.3 No Waiver</h3>
+    <p>Our failure to enforce any right doesn't waive that right.</p>
+
+    <h3>14.4 Assignment</h3>
+    <p>You may not assign these Terms. We may assign them without notice.</p>
+
+    <h3>14.5 Entire Agreement</h3>
+    <p>These Terms, together with our Privacy Policy and other referenced policies, constitute the entire agreement.</p>
+
+    <h2>15. Contact Information</h2>
+    <p>Questions about these Terms? Contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> support@tagoja.com</li>
+      <li><strong>Mail:</strong> TAGOJA c/o SEOWOO LLC, 30 N Gould St, Sheridan, WY 82801, United States</li>
+    </ul>
+
+    <div class="info-box" style="margin-top: 48px;">
+      <p><strong>Thank you for using TAGOJA responsibly.</strong> These Terms help us maintain a safe, fair marketplace for everyone. If you have questions, we're here to help.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TAGOJA. All rights reserved. | <a href="privacy.html">Privacy</a> | <a href="help.html">Help Center</a> | <a href="cookies.html">Cookies</a></p>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -1,503 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | TAGOJA</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | TAGOJA</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #cbd5e1;
-            line-height: 1.7;
-            font-size: 16px;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
 
-        /* NAV HEADER */
-        .nav-header {
-            padding: 16px 0;
-            border-bottom: 1px solid #e5e7eb;
-            background: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .nav-header .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    /* HEADER */
+    header {
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 0;
+    }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-        .nav-logo {
-            font-size: 28px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-decoration: none;
-            cursor: pointer;
-        }
+    .logo {
+      font-size: 28px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
 
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+    .back-link {
+      color: #6b7280;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
 
-        .nav-menu a {
-            padding: 8px 16px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
-            transition: all 0.2s;
-            color: #4b5563;
-        }
+    .back-link:hover {
+      color: #f97316;
+    }
 
-        .nav-menu a:hover {
-            background: #f3f4f6;
-            color: #1a1a1a;
-        }
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 24px;
-        }
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
 
-        .page-header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
-        }
+    .hero p {
+      font-size: 16px;
+      color: #cbd5e1;
+    }
 
-        .logo {
-            font-size: 32px;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 16px;
-            letter-spacing: 0.5px;
-        }
+    /* CONTENT */
+    .content {
+      padding: 80px 20px;
+    }
 
-        .company {
-            font-size: 14px;
-            color: #94a3b8;
-            margin-bottom: 8px;
-        }
+    .content h2 {
+      font-size: 28px;
+      font-weight: 900;
+      margin-top: 48px;
+      margin-bottom: 20px;
+      color: #1a1a1a;
+    }
 
-        h1 {
-            font-size: 42px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
+    .content h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 32px;
+      margin-bottom: 16px;
+      color: #374151;
+    }
 
-        .meta {
-            font-size: 14px;
-            color: #64748b;
-        }
+    .content p {
+      margin-bottom: 16px;
+      color: #4b5563;
+    }
 
-        h2 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-top: 48px;
-            margin-bottom: 20px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
-        }
+    .content ul, .content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      color: #4b5563;
+    }
 
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #e2e8f0;
-            margin-top: 32px;
-            margin-bottom: 16px;
-        }
+    .content li {
+      margin-bottom: 8px;
+    }
 
-        p {
-            margin-bottom: 16px;
-            color: #cbd5e1;
-        }
+    .content strong {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
 
-        ul, ol {
-            margin: 16px 0 16px 24px;
-        }
+    .highlight-box {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 20px;
+      margin: 32px 0;
+      border-radius: 8px;
+    }
 
-        li {
-            margin-bottom: 8px;
-            color: #cbd5e1;
-        }
+    .highlight-box p {
+      color: #78350f;
+      font-weight: 500;
+    }
 
-        a {
-            color: #3b82f6;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+    /* FOOTER */
+    footer {
+      background: #0f172a;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-        a:hover {
-            color: #60a5fa;
-            text-decoration: underline;
-        }
+    footer p {
+      color: #94a3b8;
+      font-size: 14px;
+    }
 
-        strong {
-            color: #f1f5f9;
-            font-weight: 600;
-        }
+    footer a {
+      color: #f97316;
+      text-decoration: none;
+    }
 
-        .section {
-            margin-bottom: 40px;
-        }
-
-        .highlight-box {
-            background: rgba(59, 130, 246, 0.1);
-            border-left: 4px solid #3b82f6;
-            padding: 20px;
-            margin: 24px 0;
-            border-radius: 4px;
-        }
-
-        .contact-box {
-            background: rgba(148, 163, 184, 0.05);
-            border: 1px solid rgba(148, 163, 184, 0.1);
-            padding: 32px;
-            border-radius: 8px;
-            margin: 40px 0;
-        }
-
-        .contact-box p {
-            margin-bottom: 12px;
-        }
-
-        footer {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid rgba(148, 163, 184, 0.1);
-            text-align: center;
-            color: #64748b;
-            font-size: 14px;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 32px;
-            color: #3b82f6;
-            font-size: 14px;
-        }
-
-        .back-link:hover {
-            color: #60a5fa;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 20px;
-            }
-
-            h1 {
-                font-size: 32px;
-            }
-
-            h2 {
-                font-size: 24px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
-        }
-    </style>
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <!-- NAVIGATION HEADER -->
-    <div class="nav-header">
-        <div class="container">
-            <div class="header-content">
-                <a href="/" class="nav-logo">TAGOJA</a>
-                <div class="nav-menu">
-                    <a href="https://market.tagoja.com">Marketplace</a>
-                    <a href="/#supply">Supply Engine</a>
-                    <a href="/#regions">Regions</a>
-                </div>
-            </div>
-        </div>
+
+<header>
+  <div class="header-content">
+    <a href="../tagoja-multilang.html" class="logo">TAGOJA</a>
+    <a href="../tagoja-multilang.html" class="back-link">← Back to Home</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: April 28, 2026</p>
+  </div>
+</section>
+
+<section class="content">
+  <div class="container">
+    
+    <div class="highlight-box">
+      <p><strong>Your privacy matters to us.</strong> This policy explains how TAGOJA collects, uses, and protects your personal information across our Marketplace and Supply Engine platforms.</p>
     </div>
 
-    <div class="container">
-        <a href="/" class="back-link">← Back to Home</a>
-        
-        <header class="page-header">
-            <div class="logo">TAGOJA</div>
-            <div class="company">Operated by SEOWOO LLC</div>
-            <h1>Privacy Policy</h1>
-            <div class="meta">
-                Effective Date: May 1, 2026 | Last Updated: May 1, 2026
-            </div>
-        </header>
+    <h2>1. Information We Collect</h2>
 
-        <div class="section">
-            <p>TAGOJA, a brand operated by SEOWOO LLC ("we," "our," or "us"), is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform, including the Marketplace and Supply Engine services.</p>
-        </div>
+    <h3>1.1 Information You Provide</h3>
+    <ul>
+      <li><strong>Account Information:</strong> Name, email address, phone number, date of birth, and password</li>
+      <li><strong>Profile Information:</strong> Profile photo, bio, location, and language preferences</li>
+      <li><strong>Business Information:</strong> Company name, tax ID, business license (for Supply Engine partners)</li>
+      <li><strong>Payment Information:</strong> Bank account details, payment card information (processed securely by our payment partners)</li>
+      <li><strong>Verification Documents:</strong> Government-issued ID, proof of address</li>
+      <li><strong>Communications:</strong> Messages, reviews, support tickets, and feedback</li>
+    </ul>
 
-        <div class="section">
-            <h2>1. Information We Collect</h2>
-            
-            <h3>1.1 Information You Provide</h3>
-            <ul>
-                <li><strong>Account Information:</strong> Name, email address, phone number, company name, business details</li>
-                <li><strong>Profile Information:</strong> Profile photos, business descriptions, verification documents</li>
-                <li><strong>Transaction Information:</strong> Payment details, shipping addresses, order history</li>
-                <li><strong>Communications:</strong> Messages, support inquiries, feedback, reviews</li>
-            </ul>
+    <h3>1.2 Information Collected Automatically</h3>
+    <ul>
+      <li><strong>Device Information:</strong> IP address, device type, operating system, browser type</li>
+      <li><strong>Usage Data:</strong> Pages viewed, features used, time spent, search queries</li>
+      <li><strong>Location Data:</strong> GPS coordinates (with your permission), IP-based location</li>
+      <li><strong>Cookies & Similar Technologies:</strong> Session data, preferences, analytics</li>
+    </ul>
 
-            <h3>1.2 Automatically Collected Information</h3>
-            <ul>
-                <li><strong>Device Information:</strong> IP address, browser type, operating system, device identifiers</li>
-                <li><strong>Usage Data:</strong> Pages visited, features used, time spent, click patterns</li>
-                <li><strong>Location Data:</strong> General location based on IP address (precise location only with consent)</li>
-                <li><strong>Cookies and Tracking:</strong> See our Cookie Policy for details</li>
-            </ul>
+    <h3>1.3 Information from Third Parties</h3>
+    <ul>
+      <li><strong>Social Media:</strong> Profile information when you connect accounts</li>
+      <li><strong>Payment Providers:</strong> Transaction verification and fraud prevention data</li>
+      <li><strong>Logistics Partners:</strong> Shipping and delivery information</li>
+      <li><strong>Verification Services:</strong> Identity verification results</li>
+    </ul>
 
-            <h3>1.3 Information from Third Parties</h3>
-            <ul>
-                <li><strong>Payment Processors:</strong> Transaction confirmations, payment status</li>
-                <li><strong>Logistics Partners:</strong> Shipping updates, delivery confirmations</li>
-                <li><strong>Verification Services:</strong> Identity verification, business validation</li>
-                <li><strong>Social Media:</strong> If you connect social accounts (with your permission)</li>
-            </ul>
-        </div>
+    <h2>2. How We Use Your Information</h2>
 
-        <div class="section">
-            <h2>2. How We Use Your Information</h2>
-            
-            <h3>2.1 Provide Services</h3>
-            <ul>
-                <li>Create and manage your account</li>
-                <li>Process transactions and payments</li>
-                <li>Facilitate buying, selling, and sourcing</li>
-                <li>Connect suppliers, sellers, and logistics partners</li>
-                <li>Provide customer support</li>
-            </ul>
+    <h3>2.1 To Provide Our Services</h3>
+    <ul>
+      <li>Create and manage your account</li>
+      <li>Process transactions and payments</li>
+      <li>Enable communication between users</li>
+      <li>Provide customer support</li>
+      <li>Facilitate shipping and delivery</li>
+      <li>Connect suppliers, sellers, and logistics partners (Supply Engine)</li>
+    </ul>
 
-            <h3>2.2 Improve Platform</h3>
-            <ul>
-                <li>Analyze usage patterns and optimize features</li>
-                <li>Develop new products and services</li>
-                <li>Conduct research and analytics</li>
-                <li>Test new features</li>
-            </ul>
+    <h3>2.2 To Improve and Personalize</h3>
+    <ul>
+      <li>Recommend relevant products and services</li>
+      <li>Customize your experience</li>
+      <li>Analyze usage patterns and trends</li>
+      <li>Test new features and improvements</li>
+      <li>Send personalized marketing communications (with your consent)</li>
+    </ul>
 
-            <h3>2.3 Communicate</h3>
-            <ul>
-                <li>Send transaction confirmations and updates</li>
-                <li>Provide customer support responses</li>
-                <li>Send marketing communications (with consent)</li>
-                <li>Notify about platform updates and changes</li>
-            </ul>
+    <h3>2.3 For Safety and Security</h3>
+    <ul>
+      <li>Verify identity and prevent fraud</li>
+      <li>Detect and prevent prohibited activities</li>
+      <li>Enforce our Terms of Service</li>
+      <li>Comply with legal obligations</li>
+      <li>Protect against security threats</li>
+    </ul>
 
-            <h3>2.4 Security and Compliance</h3>
-            <ul>
-                <li>Prevent fraud and abuse</li>
-                <li>Enforce our Terms of Service</li>
-                <li>Comply with legal obligations</li>
-                <li>Protect user safety and platform integrity</li>
-            </ul>
-        </div>
+    <h2>3. How We Share Your Information</h2>
 
-        <div class="section">
-            <h2>3. How We Share Your Information</h2>
-            
-            <h3>3.1 With Other Users</h3>
-            <ul>
-                <li><strong>Buyers and Sellers:</strong> Name, ratings, reviews, transaction history (as needed for transactions)</li>
-                <li><strong>Public Listings:</strong> Product details, seller information (as you choose to make public)</li>
-            </ul>
+    <h3>3.1 With Other Users</h3>
+    <p>When you use TAGOJA, certain information is visible to other users:</p>
+    <ul>
+      <li>Profile information (name, photo, location, ratings)</li>
+      <li>Listings and products you offer</li>
+      <li>Public reviews and ratings</li>
+      <li>Messages in transaction chats</li>
+    </ul>
 
-            <h3>3.2 With Service Providers</h3>
-            <ul>
-                <li>Payment processors</li>
-                <li>Shipping and logistics partners</li>
-                <li>Cloud hosting providers</li>
-                <li>Analytics services</li>
-                <li>Customer support tools</li>
-                <li>Marketing platforms (with consent)</li>
-            </ul>
+    <h3>3.2 With Service Providers</h3>
+    <p>We share information with trusted partners who help us operate:</p>
+    <ul>
+      <li><strong>Payment Processors:</strong> Stripe, PayPal, local payment providers</li>
+      <li><strong>Logistics Partners:</strong> 3PL providers, shipping companies</li>
+      <li><strong>Cloud Services:</strong> AWS, Google Cloud for data storage</li>
+      <li><strong>Analytics:</strong> Google Analytics, Mixpanel for usage insights</li>
+      <li><strong>Customer Support:</strong> Zendesk, Intercom for support tools</li>
+      <li><strong>Verification:</strong> KYC/AML service providers</li>
+    </ul>
 
-            <h3>3.3 Business Transfers</h3>
-            <p>In connection with mergers, acquisitions, or asset sales, your information may be transferred (you will be notified)</p>
+    <h3>3.3 For Legal Reasons</h3>
+    <p>We may disclose information when required by law or to:</p>
+    <ul>
+      <li>Respond to legal requests (subpoenas, court orders)</li>
+      <li>Comply with regulatory obligations</li>
+      <li>Protect our rights and property</li>
+      <li>Investigate fraud or security issues</li>
+      <li>Protect user safety</li>
+    </ul>
 
-            <h3>3.4 Legal Requirements</h3>
-            <p>When required by law, court order, or governmental request, or to protect rights and safety</p>
+    <h3>3.4 Business Transfers</h3>
+    <p>If TAGOJA is acquired or merged, your information may be transferred to the new owner.</p>
 
-            <h3>3.5 With Your Consent</h3>
-            <p>Any other sharing will be done with your explicit permission</p>
-        </div>
+    <h2>4. Data Retention</h2>
+    <p>We retain your information for as long as necessary to provide services and comply with legal obligations:</p>
+    <ul>
+      <li><strong>Active Accounts:</strong> Data retained while your account is active</li>
+      <li><strong>Closed Accounts:</strong> Basic information retained for 7 years (legal compliance)</li>
+      <li><strong>Transaction Records:</strong> Retained for 10 years (tax and legal requirements)</li>
+      <li><strong>Marketing Data:</strong> Deleted within 30 days of unsubscribing</li>
+    </ul>
 
-        <div class="section">
-            <h2>4. Data Retention</h2>
-            <p>We retain your information:</p>
-            <ul>
-                <li><strong>Active Accounts:</strong> As long as your account is active</li>
-                <li><strong>Transaction Records:</strong> 7 years after transaction (for legal/tax purposes)</li>
-                <li><strong>Marketing Data:</strong> Until you withdraw consent</li>
-                <li><strong>Legal Hold:</strong> Longer if required by law or legal proceedings</li>
-            </ul>
-            <p>You can request deletion of your data at any time (subject to legal retention requirements)</p>
-        </div>
+    <h2>5. Your Rights and Choices</h2>
 
-        <div class="section">
-            <h2>5. Your Rights and Choices</h2>
-            
-            <h3>5.1 Access and Control</h3>
-            <ul>
-                <li><strong>Access:</strong> Request a copy of your personal data</li>
-                <li><strong>Correction:</strong> Update or correct inaccurate information</li>
-                <li><strong>Deletion:</strong> Request deletion of your data ("right to be forgotten")</li>
-                <li><strong>Portability:</strong> Receive your data in a machine-readable format</li>
-                <li><strong>Restriction:</strong> Limit how we process your data</li>
-            </ul>
+    <h3>5.1 Access and Portability</h3>
+    <p>You can request a copy of your personal data in a machine-readable format.</p>
 
-            <h3>5.2 Marketing Communications</h3>
-            <ul>
-                <li>Opt-out of marketing emails via unsubscribe link</li>
-                <li>Manage notification preferences in account settings</li>
-                <li>Control cookie preferences (see Cookie Policy)</li>
-            </ul>
+    <h3>5.2 Correction and Updates</h3>
+    <p>Update your information anytime in your account settings or contact us for assistance.</p>
 
-            <h3>5.3 Account Management</h3>
-            <ul>
-                <li>Update profile information anytime</li>
-                <li>Deactivate or delete your account</li>
-                <li>Download your data</li>
-            </ul>
-        </div>
+    <h3>5.3 Deletion</h3>
+    <p>Request deletion of your account and data. Note: We may retain certain information for legal compliance.</p>
 
-        <div class="section">
-            <h2>6. Data Security</h2>
-            <p>We implement industry-standard security measures:</p>
-            <ul>
-                <li>Encryption in transit (TLS/SSL)</li>
-                <li>Encryption at rest for sensitive data</li>
-                <li>Regular security audits and testing</li>
-                <li>Access controls and authentication</li>
-                <li>Secure data centers and backup systems</li>
-            </ul>
-            <div class="highlight-box">
-                <p><strong>Important:</strong> However, no system is 100% secure. Please use strong passwords and protect your account credentials.</p>
-            </div>
-        </div>
+    <h3>5.4 Marketing Opt-Out</h3>
+    <p>Unsubscribe from marketing emails via the link in any email or in your account settings.</p>
 
-        <div class="section">
-            <h2>7. International Data Transfers</h2>
-            <p>TAGOJA operates globally. Your data may be transferred to and processed in countries outside your residence, including:</p>
-            <ul>
-                <li>Cloud servers in the United States, Singapore, and Europe</li>
-                <li>Payment processors in various jurisdictions</li>
-                <li>Partner services globally</li>
-            </ul>
-            <p>We ensure adequate safeguards through:</p>
-            <ul>
-                <li>Standard contractual clauses</li>
-                <li>Privacy Shield frameworks (where applicable)</li>
-                <li>Consent for transfers</li>
-            </ul>
-        </div>
+    <h3>5.5 Cookie Management</h3>
+    <p>Control cookies through your browser settings. Note: Disabling cookies may limit functionality.</p>
 
-        <div class="section">
-            <h2>8. Children's Privacy</h2>
-            <p>TAGOJA is not intended for users under 18. We do not knowingly collect information from children. If you believe a child has provided information, please contact us immediately.</p>
-        </div>
+    <h3>5.6 Do Not Sell</h3>
+    <p>We do not sell your personal information. You can opt out of targeted advertising in settings.</p>
 
-        <div class="section">
-            <h2>9. Regional Specific Rights</h2>
-            
-            <h3>9.1 European Economic Area (EEA/GDPR)</h3>
-            <ul>
-                <li>Legal basis for processing: Contract, consent, legitimate interest, legal obligation</li>
-                <li>Right to lodge complaints with supervisory authorities</li>
-                <li>Right to object to processing</li>
-                <li>Contact: support@tagoja.com</li>
-            </ul>
+    <h2>6. Data Security</h2>
+    <p>We implement industry-standard security measures:</p>
+    <ul>
+      <li><strong>Encryption:</strong> TLS/SSL for data in transit, AES-256 for data at rest</li>
+      <li><strong>Access Controls:</strong> Role-based access, multi-factor authentication</li>
+      <li><strong>Regular Audits:</strong> Security assessments and penetration testing</li>
+      <li><strong>Monitoring:</strong> 24/7 threat detection and response</li>
+      <li><strong>Employee Training:</strong> Regular security and privacy training</li>
+    </ul>
 
-            <h3>9.2 California (CCPA/CPRA)</h3>
-            <ul>
-                <li>Right to know what personal information is collected</li>
-                <li>Right to delete personal information</li>
-                <li>Right to opt-out of sale (we do not sell personal information)</li>
-                <li>Right to non-discrimination</li>
-            </ul>
+    <h2>7. International Data Transfers</h2>
+    <p>TAGOJA operates globally. Your information may be transferred to and processed in countries outside your residence. We ensure appropriate safeguards are in place, including:</p>
+    <ul>
+      <li>Standard Contractual Clauses (SCCs)</li>
+      <li>Adequacy decisions by regulatory authorities</li>
+      <li>Your explicit consent where required</li>
+    </ul>
 
-            <h3>9.3 Southeast Asia</h3>
-            <p>We comply with local data protection laws in:</p>
-            <ul>
-                <li>Philippines: Data Privacy Act of 2012</li>
-                <li>Indonesia: Personal Data Protection Law</li>
-                <li>Thailand: Personal Data Protection Act</li>
-                <li>Vietnam: Cybersecurity Law</li>
-                <li>Singapore: Personal Data Protection Act</li>
-                <li>Malaysia: Personal Data Protection Act</li>
-            </ul>
-        </div>
+    <h2>8. Children's Privacy</h2>
+    <p>TAGOJA is not intended for users under 18. We do not knowingly collect information from children. If we discover a child's account, we will delete it immediately.</p>
 
-        <div class="section">
-            <h2>10. Cookies and Tracking</h2>
-            <p>See our separate <a href="/cookie-policy">Cookie Policy</a> for detailed information about:</p>
-            <ul>
-                <li>Types of cookies we use</li>
-                <li>How to manage cookie preferences</li>
-                <li>Third-party tracking technologies</li>
-            </ul>
-        </div>
+    <h2>9. Region-Specific Provisions</h2>
 
-        <div class="section">
-            <h2>11. Third-Party Links</h2>
-            <p>Our platform may contain links to third-party websites. We are not responsible for their privacy practices. Please review their privacy policies.</p>
-        </div>
+    <h3>9.1 European Economic Area (EEA) / UK</h3>
+    <p>Under GDPR/UK GDPR, you have additional rights:</p>
+    <ul>
+      <li>Right to object to processing</li>
+      <li>Right to restrict processing</li>
+      <li>Right to lodge a complaint with supervisory authorities</li>
+      <li>Right to withdraw consent</li>
+    </ul>
 
-        <div class="section">
-            <h2>12. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy periodically. We will:</p>
-            <ul>
-                <li>Post the updated version with a new "Last Updated" date</li>
-                <li>Notify you of material changes via email or platform notification</li>
-                <li>Obtain consent if required by law</li>
-            </ul>
-            <p>Continued use after changes constitutes acceptance of the updated policy.</p>
-        </div>
+    <h3>9.2 California (USA)</h3>
+    <p>Under CCPA/CPRA, California residents have rights to:</p>
+    <ul>
+      <li>Know what personal information is collected</li>
+      <li>Delete personal information</li>
+      <li>Opt-out of sale/sharing</li>
+      <li>Non-discrimination for exercising rights</li>
+    </ul>
 
-        <div class="contact-box">
-            <h2>13. Contact Us</h2>
-            <p>For privacy-related questions or requests:</p>
-            <p><strong>Email:</strong> <a href="mailto:support@tagoja.com">support@tagoja.com</a></p>
-            <p><strong>Mail:</strong><br>
-            TAGOJA c/o SEOWOO LLC<br>
-            30 N Gould St<br>
-            Sheridan, WY 82801<br>
-            United States</p>
-            <p><strong>Response Time:</strong> We aim to respond within 30 days (or as required by local law)</p>
-        </div>
+    <h3>9.3 Philippines</h3>
+    <p>Under the Data Privacy Act of 2012, we comply with all NPC requirements and your rights as a data subject.</p>
 
-        <footer>
-            <p><strong>Your privacy matters to us. We are committed to transparency and protecting your data.</strong></p>
-            <p style="margin-top: 20px;">© 2026 TAGOJA by SEOWOO LLC. All rights reserved. | <a href="terms-of-service.html">Terms of Service</a> | <a href="cookie-policy.html">Cookie Policy</a></p>
-        </footer>
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this policy periodically. We'll notify you of material changes via:</p>
+    <ul>
+      <li>Email to your registered address</li>
+      <li>In-app notification</li>
+      <li>Prominent notice on our website</li>
+    </ul>
+    <p>Continued use after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>For privacy questions or to exercise your rights, contact us:</p>
+    <ul>
+      <li><strong>Email:</strong> support@tagoja.com</li>
+      <li><strong>Mail:</strong> TAGOJA c/o SEOWOO LLC, 30 N Gould St, Sheridan, WY 82801, United States</li>
+      <li><strong>Data Protection Officer:</strong> support@tagoja.com</li>
+    </ul>
+
+    <div class="highlight-box" style="margin-top: 48px;">
+      <p><strong>Questions?</strong> If you have any concerns about how we handle your data, please don't hesitate to contact us. We're committed to protecting your privacy and will respond to all inquiries within 30 days.</p>
     </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 TAGOJA. All rights reserved. | <a href="help.html">Help Center</a> | <a href="terms.html">Terms</a> | <a href="cookies.html">Cookies</a></p>
+  </div>
+</footer>
+
 </body>
 </html>
