@@ -19,13 +19,68 @@
             font-size: 16px;
         }
 
+        /* NAV HEADER */
+        .nav-header {
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e7eb;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .nav-header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 28px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-menu a {
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.2s;
+            color: #4b5563;
+        }
+
+        .nav-menu a:hover {
+            background: #f3f4f6;
+            color: #1a1a1a;
+        }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 60px 24px;
         }
 
-        header {
+        .page-header {
             text-align: center;
             margin-bottom: 60px;
             padding-bottom: 40px;
@@ -171,10 +226,24 @@
     </style>
 </head>
 <body>
+    <!-- NAVIGATION HEADER -->
+    <div class="nav-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="nav-logo">TAGOJA</a>
+                <div class="nav-menu">
+                    <a href="https://market.tagoja.com">Marketplace</a>
+                    <a href="/#supply">Supply Engine</a>
+                    <a href="/#regions">Regions</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <a href="/" class="back-link">← Back to Home</a>
         
-        <header>
+        <header class="page-header">
             <div class="logo">TAGOJA</div>
             <div class="company">Operated by SEOWOO LLC</div>
             <h1>Privacy Policy</h1>
@@ -427,7 +496,7 @@
 
         <footer>
             <p><strong>Your privacy matters to us. We are committed to transparency and protecting your data.</strong></p>
-            <p style="margin-top: 20px;">© 2026 TAGOJA by SEOWOO LLC. All rights reserved. | <a href="/terms">Terms of Service</a> | <a href="/cookie-policy">Cookie Policy</a></p>
+            <p style="margin-top: 20px;">© 2026 TAGOJA by SEOWOO LLC. All rights reserved. | <a href="terms-of-service.html">Terms of Service</a> | <a href="cookie-policy.html">Cookie Policy</a></p>
         </footer>
     </div>
 </body>
