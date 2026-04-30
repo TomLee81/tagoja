@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | TAGOJA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: 0.5px;
+        }
+
+        .company {
+            font-size: 14px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 48px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+        }
+
+        h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-top: 32px;
+            margin-bottom: 16px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #cbd5e1;
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: #cbd5e1;
+        }
+
+        ul, ol {
+            margin: 16px 0 16px 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #cbd5e1;
+        }
+
+        a {
+            color: #3b82f6;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #60a5fa;
+            text-decoration: underline;
+        }
+
+        strong {
+            color: #f1f5f9;
+            font-weight: 600;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: rgba(148, 163, 184, 0.03);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cookie-table th {
+            background: rgba(59, 130, 246, 0.1);
+            color: #ffffff;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .cookie-table td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            font-size: 14px;
+        }
+
+        .cookie-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .info-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background: rgba(251, 191, 36, 0.1);
+            border-left: 4px solid #fbbf24;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 4px;
+        }
+
+        .contact-box {
+            background: rgba(148, 163, 184, 0.05);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 32px;
+            border-radius: 8px;
+            margin: 40px 0;
+        }
+
+        .contact-box p {
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .tag.required {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+        }
+
+        .tag.optional {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 32px;
+            color: #3b82f6;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            color: #60a5fa;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            .cookie-table {
+                font-size: 13px;
+            }
+
+            .cookie-table th,
+            .cookie-table td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link">← Back to Home</a>
+        
+        <header>
+            <div class="logo">TAGOJA</div>
+            <div class="company">Operated by SEOWOO LLC</div>
+            <h1>Cookie Policy</h1>
+            <div class="meta">
+                Effective Date: May 1, 2026 | Last Updated: May 1, 2026
+            </div>
+        </header>
+
+        <div class="section">
+            <p>This Cookie Policy explains how TAGOJA, a brand operated by SEOWOO LLC ("we," "our," or "us"), uses cookies and similar tracking technologies on our platform.</p>
+        </div>
+
+        <div class="section">
+            <h2>1. What Are Cookies?</h2>
+            <p>Cookies are small text files stored on your device (computer, smartphone, tablet) when you visit websites. They help websites remember information about your visit.</p>
+
+            <h3>Types of Technologies We Use:</h3>
+            <ul>
+                <li><strong>Cookies:</strong> Text files stored by your browser</li>
+                <li><strong>Local Storage:</strong> Data stored in your browser</li>
+                <li><strong>Session Storage:</strong> Temporary data cleared when you close the browser</li>
+                <li><strong>Pixels/Beacons:</strong> Tiny images that track page views</li>
+                <li><strong>SDKs:</strong> Code in mobile apps that collects usage data</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>2. Why We Use Cookies</h2>
+            <p>We use cookies to:</p>
+            <ul>
+                <li><strong>Make the platform work</strong> (essential functions)</li>
+                <li><strong>Remember your preferences</strong> (language, settings)</li>
+                <li><strong>Understand how you use our platform</strong> (analytics)</li>
+                <li><strong>Show relevant content</strong> (personalization)</li>
+                <li><strong>Improve security</strong> (fraud prevention)</li>
+                <li><strong>Deliver advertising</strong> (with your consent)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. Types of Cookies We Use</h2>
+
+            <h3>3.1 Strictly Necessary Cookies</h3>
+            <div>
+                <span class="tag required">Required</span>
+                <span class="tag">Cannot be disabled</span>
+            </div>
+            <p><strong>Purpose:</strong> Essential for the platform to function</p>
+            <p><strong>Duration:</strong> Session or up to 1 year</p>
+
+            <p><strong>What they do:</strong></p>
+            <ul>
+                <li>Authenticate your login</li>
+                <li>Remember items in your cart</li>
+                <li>Enable secure transactions</li>
+                <li>Prevent fraudulent activity</li>
+                <li>Maintain session state</li>
+                <li>Route traffic to appropriate servers</li>
+            </ul>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>session_id</code></td>
+                        <td>Maintain login session</td>
+                        <td>Session</td>
+                    </tr>
+                    <tr>
+                        <td><code>csrf_token</code></td>
+                        <td>Prevent cross-site attacks</td>
+                        <td>Session</td>
+                    </tr>
+                    <tr>
+                        <td><code>auth_token</code></td>
+                        <td>Authenticate API requests</td>
+                        <td>30 days</td>
+                    </tr>
+                    <tr>
+                        <td><code>cart_id</code></td>
+                        <td>Remember shopping cart</td>
+                        <td>7 days</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.2 Functional Cookies</h3>
+            <div>
+                <span class="tag optional">Optional</span>
+                <span class="tag">Can be disabled</span>
+            </div>
+            <p><strong>Purpose:</strong> Remember your choices and preferences</p>
+            <p><strong>Duration:</strong> Up to 2 years</p>
+
+            <p><strong>What they do:</strong></p>
+            <ul>
+                <li>Remember your language preference</li>
+                <li>Store your region/country selection</li>
+                <li>Save display preferences (grid vs list view)</li>
+                <li>Remember recently viewed items</li>
+                <li>Keep you logged in across sessions</li>
+                <li>Preserve search filters</li>
+            </ul>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>lang</code></td>
+                        <td>Language preference</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td><code>region</code></td>
+                        <td>Country/region selection</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td><code>theme</code></td>
+                        <td>Light/dark mode</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td><code>view_mode</code></td>
+                        <td>Grid/list preference</td>
+                        <td>6 months</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.3 Analytics Cookies</h3>
+            <div>
+                <span class="tag optional">Optional</span>
+                <span class="tag">Can be disabled</span>
+            </div>
+            <p><strong>Purpose:</strong> Understand how visitors use our platform</p>
+            <p><strong>Duration:</strong> Up to 2 years</p>
+
+            <p><strong>What they do:</strong></p>
+            <ul>
+                <li>Count visitors and page views</li>
+                <li>Track how users navigate</li>
+                <li>Identify popular features</li>
+                <li>Measure loading times</li>
+                <li>Detect technical errors</li>
+                <li>Optimize user experience</li>
+            </ul>
+
+            <p><strong>Third-party services we use:</strong></p>
+            <ul>
+                <li><strong>Google Analytics:</strong> Website traffic analysis</li>
+                <li><strong>Mixpanel:</strong> Product analytics</li>
+                <li><strong>Hotjar:</strong> Heatmaps and session recordings</li>
+                <li><strong>Sentry:</strong> Error tracking</li>
+            </ul>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>_ga</code></td>
+                        <td>Google Analytics</td>
+                        <td>Distinguish users</td>
+                        <td>2 years</td>
+                    </tr>
+                    <tr>
+                        <td><code>_gid</code></td>
+                        <td>Google Analytics</td>
+                        <td>Distinguish users</td>
+                        <td>24 hours</td>
+                    </tr>
+                    <tr>
+                        <td><code>mp_*</code></td>
+                        <td>Mixpanel</td>
+                        <td>Track user behavior</td>
+                        <td>1 year</td>
+                    </tr>
+                    <tr>
+                        <td><code>_hjid</code></td>
+                        <td>Hotjar</td>
+                        <td>User identification</td>
+                        <td>1 year</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.4 Marketing/Advertising Cookies</h3>
+            <div>
+                <span class="tag optional">Requires consent</span>
+                <span class="tag">Can be disabled</span>
+            </div>
+            <p><strong>Purpose:</strong> Deliver relevant ads and measure effectiveness</p>
+            <p><strong>Duration:</strong> Up to 2 years</p>
+
+            <p><strong>What they do:</strong></p>
+            <ul>
+                <li>Show personalized ads</li>
+                <li>Limit ad frequency (frequency capping)</li>
+                <li>Measure ad campaign performance</li>
+                <li>Track conversions</li>
+                <li>Create lookalike audiences</li>
+                <li>Retarget visitors</li>
+            </ul>
+
+            <p><strong>Third-party services:</strong></p>
+            <ul>
+                <li><strong>Google Ads:</strong> Display advertising</li>
+                <li><strong>Facebook Pixel:</strong> Social media advertising</li>
+                <li><strong>TikTok Pixel:</strong> Social media advertising</li>
+                <li><strong>Criteo:</strong> Retargeting</li>
+                <li><strong>LinkedIn Insight Tag:</strong> B2B advertising</li>
+            </ul>
+
+            <table class="cookie-table">
+                <thead>
+                    <tr>
+                        <th>Cookie Name</th>
+                        <th>Provider</th>
+                        <th>Purpose</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>_gcl_*</code></td>
+                        <td>Google Ads</td>
+                        <td>Ad click tracking</td>
+                        <td>90 days</td>
+                    </tr>
+                    <tr>
+                        <td><code>fr</code></td>
+                        <td>Facebook</td>
+                        <td>Ad delivery</td>
+                        <td>90 days</td>
+                    </tr>
+                    <tr>
+                        <td><code>tt_pixel</code></td>
+                        <td>TikTok</td>
+                        <td>Ad measurement</td>
+                        <td>13 months</td>
+                    </tr>
+                    <tr>
+                        <td><code>bcookie</code></td>
+                        <td>LinkedIn</td>
+                        <td>Browser identification</td>
+                        <td>1 year</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>3.5 Social Media Cookies</h3>
+            <div>
+                <span class="tag optional">Optional</span>
+                <span class="tag">Can be disabled</span>
+            </div>
+            <p><strong>Purpose:</strong> Enable social sharing and integration</p>
+
+            <p><strong>What they do:</strong></p>
+            <ul>
+                <li>Enable sharing to social networks</li>
+                <li>Show social feeds on our platform</li>
+                <li>Track social referrals</li>
+                <li>Enable social login</li>
+            </ul>
+
+            <p><strong>Platforms:</strong> Facebook, Instagram, Twitter/X, LinkedIn, WhatsApp</p>
+        </div>
+
+        <div class="section">
+            <h2>4. How Long Cookies Last</h2>
+
+            <h3>Session Cookies</h3>
+            <ul>
+                <li>Deleted when you close your browser</li>
+                <li>Used for essential functions</li>
+            </ul>
+
+            <h3>Persistent Cookies</h3>
+            <ul>
+                <li>Remain until deleted or expired</li>
+                <li>Duration ranges from 24 hours to 2 years</li>
+                <li>Can be deleted manually</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>5. First-Party vs. Third-Party Cookies</h2>
+
+            <h3>First-Party Cookies</h3>
+            <ul>
+                <li>Set by TAGOJA directly</li>
+                <li>Used for core platform functionality</li>
+                <li>Fully under our control</li>
+            </ul>
+
+            <h3>Third-Party Cookies</h3>
+            <ul>
+                <li>Set by external services (analytics, ads)</li>
+                <li>Subject to their privacy policies</li>
+                <li>We select trusted partners only</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>6. Managing Your Cookie Preferences</h2>
+
+            <h3>6.1 Cookie Consent Manager</h3>
+            <p>When you first visit TAGOJA, you'll see a cookie banner where you can:</p>
+            <ul>
+                <li>Accept all cookies</li>
+                <li>Reject non-essential cookies</li>
+                <li>Customize your preferences</li>
+            </ul>
+
+            <div class="info-box">
+                <p><strong>Access settings anytime:</strong></p>
+                <ul style="margin-bottom: 0;">
+                    <li>Click "Cookie Preferences" in the footer</li>
+                    <li>Manage categories individually</li>
+                    <li>Save your choices</li>
+                </ul>
+            </div>
+
+            <h3>6.2 Browser Settings</h3>
+            <p>Most browsers allow you to:</p>
+            <ul>
+                <li>Block all cookies</li>
+                <li>Block third-party cookies only</li>
+                <li>Delete existing cookies</li>
+                <li>Receive alerts when cookies are set</li>
+            </ul>
+
+            <h4>How to manage cookies in popular browsers:</h4>
+
+            <p><strong>Google Chrome:</strong></p>
+            <ol>
+                <li>Settings → Privacy and security → Cookies and other site data</li>
+                <li>Choose your preference level</li>
+                <li>Manage site-specific settings</li>
+            </ol>
+
+            <p><strong>Safari:</strong></p>
+            <ol>
+                <li>Preferences → Privacy</li>
+                <li>Choose "Block all cookies" or customize</li>
+                <li>Manage website data</li>
+            </ol>
+
+            <p><strong>Firefox:</strong></p>
+            <ol>
+                <li>Options → Privacy & Security</li>
+                <li>Custom settings under Cookies and Site Data</li>
+                <li>Manage exceptions</li>
+            </ol>
+
+            <p><strong>Microsoft Edge:</strong></p>
+            <ol>
+                <li>Settings → Privacy, search, and services</li>
+                <li>Manage and delete cookies</li>
+                <li>Choose tracking prevention level</li>
+            </ol>
+
+            <h3>6.3 Mobile Devices</h3>
+            <p><strong>iOS:</strong> Settings → Safari → Block All Cookies</p>
+            <p><strong>Android:</strong> Chrome → Settings → Site settings → Cookies</p>
+
+            <h3>6.4 Opt-Out Tools</h3>
+            <ul>
+                <li><strong>Google Ads:</strong> <a href="https://adssettings.google.com">https://adssettings.google.com</a></li>
+                <li><strong>Facebook:</strong> <a href="https://www.facebook.com/settings/?tab=ads">https://www.facebook.com/settings/?tab=ads</a></li>
+                <li><strong>Network Advertising Initiative:</strong> <a href="https://optout.networkadvertising.org">https://optout.networkadvertising.org</a></li>
+                <li><strong>Digital Advertising Alliance:</strong> <a href="https://optout.aboutads.info">https://optout.aboutads.info</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>7. Impact of Disabling Cookies</h2>
+
+            <div class="warning-box">
+                <h3>If you disable all cookies:</h3>
+                <ul style="margin-bottom: 0;">
+                    <li>❌ You cannot log in</li>
+                    <li>❌ Shopping cart won't work</li>
+                    <li>❌ Preferences won't be saved</li>
+                    <li>❌ Security features may not function</li>
+                    <li>⚠️ Platform may not work properly</li>
+                </ul>
+            </div>
+
+            <h3>If you disable functional cookies:</h3>
+            <ul>
+                <li>⚠️ Language resets to default</li>
+                <li>⚠️ Settings don't persist</li>
+                <li>⚠️ You may be asked to log in frequently</li>
+                <li>✅ Platform still works</li>
+            </ul>
+
+            <h3>If you disable analytics cookies:</h3>
+            <ul>
+                <li>✅ No impact on functionality</li>
+                <li>ℹ️ We can't improve based on your usage</li>
+            </ul>
+
+            <h3>If you disable marketing cookies:</h3>
+            <ul>
+                <li>✅ No impact on functionality</li>
+                <li>ℹ️ Ads will be less relevant</li>
+                <li>ℹ️ Ads may appear more frequently</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>8. Do Not Track (DNT)</h2>
+            <p>Some browsers offer "Do Not Track" signals. Currently, there is no industry standard for responding to DNT. We respect browser cookie settings and provide our own consent manager.</p>
+        </div>
+
+        <div class="section">
+            <h2>9. Cookies and Mobile Apps</h2>
+            <p>Our mobile apps use:</p>
+            <ul>
+                <li><strong>App-based identifiers:</strong> Device ID, advertising ID</li>
+                <li><strong>Local storage:</strong> Similar to browser cookies</li>
+                <li><strong>SDKs:</strong> Third-party analytics and advertising tools</li>
+            </ul>
+
+            <p><strong>Manage mobile tracking:</strong></p>
+            <ul>
+                <li><strong>iOS:</strong> Settings → Privacy → Tracking → Allow Apps to Request to Track (OFF)</li>
+                <li><strong>Android:</strong> Settings → Google → Ads → Opt out of Ads Personalization</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>10. Updates to This Policy</h2>
+            <p>We may update this Cookie Policy to reflect:</p>
+            <ul>
+                <li>New cookies or technologies</li>
+                <li>Changes in regulations</li>
+                <li>Platform improvements</li>
+            </ul>
+
+            <p><strong>When we update:</strong></p>
+            <ul>
+                <li>We'll update the "Last Updated" date</li>
+                <li>Significant changes will be notified via banner</li>
+                <li>Continued use indicates acceptance</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>11. Regional Information</h2>
+
+            <h3>11.1 European Economic Area (GDPR)</h3>
+            <ul>
+                <li>We obtain consent before using non-essential cookies</li>
+                <li>You can withdraw consent anytime</li>
+                <li>Legal basis: Consent (GDPR Article 6(1)(a))</li>
+                <li>Cookie consent is separate from Terms acceptance</li>
+            </ul>
+
+            <h3>11.2 United Kingdom</h3>
+            <ul>
+                <li>We comply with UK GDPR and PECR</li>
+                <li>Same consent requirements as EU</li>
+            </ul>
+
+            <h3>11.3 California (CCPA)</h3>
+            <ul>
+                <li>Cookies may be considered "sale" of personal information</li>
+                <li>Opt-out available via "Do Not Sell My Info"</li>
+                <li>Privacy policy provides additional details</li>
+            </ul>
+
+            <h3>11.4 Brazil (LGPD)</h3>
+            <ul>
+                <li>We obtain consent for non-essential cookies</li>
+                <li>Full data processing details in Privacy Policy</li>
+            </ul>
+
+            <h3>11.5 Southeast Asia</h3>
+            <p>We comply with local cookie and privacy laws in:</p>
+            <ul>
+                <li>Philippines</li>
+                <li>Indonesia</li>
+                <li>Thailand</li>
+                <li>Vietnam</li>
+                <li>Singapore</li>
+                <li>Malaysia</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>12. Children's Privacy</h2>
+            <p>TAGOJA is not intended for users under 18. We do not knowingly set cookies for children. If you believe a child has used our platform, contact us immediately.</p>
+        </div>
+
+        <div class="contact-box">
+            <h2>13. Contact Us</h2>
+            <p><strong>Questions about cookies?</strong></p>
+            <p><strong>Email:</strong> <a href="mailto:support@tagoja.com">support@tagoja.com</a></p>
+            <p><strong>Mailing Address:</strong><br>
+            TAGOJA c/o SEOWOO LLC<br>
+            30 N Gould St<br>
+            Sheridan, WY 82801<br>
+            United States</p>
+            <p><strong>Response time:</strong> 30 days</p>
+        </div>
+
+        <div class="section">
+            <h2>Additional Resources</h2>
+            <ul>
+                <li><strong>Privacy Policy:</strong> <a href="/privacy-policy">https://tagoja.com/privacy-policy</a></li>
+                <li><strong>Terms of Service:</strong> <a href="/terms">https://tagoja.com/terms</a></li>
+                <li><strong>Cookie Preferences:</strong> <a href="/cookie-settings">https://tagoja.com/cookie-settings</a></li>
+            </ul>
+        </div>
+
+        <footer>
+            <p><strong>We respect your privacy. Control your cookies, control your experience.</strong></p>
+            <p style="margin-top: 20px;">© 2026 TAGOJA. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+        </footer>
+    </div>
+</body>
+</html>
