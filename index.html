@@ -80,6 +80,13 @@
         min-width: 100%;
       }
     }
+    
+    /* Prevent body scroll when language menu is open on mobile */
+    body.no-scroll {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
 
     .language-selector.active .language-dropdown {
       display: block;
@@ -2165,6 +2172,13 @@ let currentLanguage = 'en';
 function toggleLanguageMenu() {
   const selector = document.getElementById('languageSelector');
   selector.classList.toggle('active');
+  
+  // Toggle body scroll lock on mobile
+  if (selector.classList.contains('active')) {
+    document.body.classList.add('no-scroll');
+  } else {
+    document.body.classList.remove('no-scroll');
+  }
 }
 
 // Close menu when clicking outside
@@ -2172,6 +2186,7 @@ document.addEventListener('click', function(event) {
   const selector = document.getElementById('languageSelector');
   if (selector && !selector.contains(event.target)) {
     selector.classList.remove('active');
+    document.body.classList.remove('no-scroll');
   }
 });
 
@@ -2192,8 +2207,9 @@ function changeLanguage(lang, flag, name) {
     }
   });
   
-  // Close menu
+  // Close menu and restore body scroll
   document.getElementById('languageSelector').classList.remove('active');
+  document.body.classList.remove('no-scroll');
   
   // Save preference
   localStorage.setItem('preferred-language', lang);
