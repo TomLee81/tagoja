@@ -1,0 +1,12 @@
+# TAGOJA Robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://tagoja.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
