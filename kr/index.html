@@ -2186,8 +2186,7 @@ const translations = {
 };
 
 // Current language
-let currentLanguage = 'en';
-
+  let currentLanguage = 'ko';
 // Toggle language menu
 function toggleLanguageMenu() {
   const selector = document.getElementById('languageSelector');
@@ -2212,9 +2211,10 @@ document.addEventListener('click', function(event) {
 
 // Change language
 function changeLanguage(lang, flag, name) {
-  // Redirect to Korean version
-  if (lang === 'ko') {
-    window.location.href = '/kr/';
+  // Redirect to root for non-Korean languages
+  if (lang !== 'ko') {
+    localStorage.setItem('preferred-language', lang);
+    window.location.href = '/';
     return;
   }
   
@@ -2243,30 +2243,26 @@ function changeLanguage(lang, flag, name) {
 
 // Load saved language on page load
 window.addEventListener('DOMContentLoaded', function() {
-  const savedLang = localStorage.getItem('preferred-language');
-  if (savedLang && translations[savedLang]) {
-    const langMap = {
-      'en': { flag: '🇬🇧', name: 'EN' },
-      'ko': { flag: '🇰🇷', name: '한국어' },
-      'tl': { flag: '🇵🇭', name: 'Tagalog' },
-      'id': { flag: '🇮🇩', name: 'Bahasa' },
-      'th': { flag: '🇹🇭', name: 'ไทย' },
-      'vi': { flag: '🇻🇳', name: 'Tiếng Việt' },
-      'zh': { flag: '🇨🇳', name: '中文' },
-      'ja': { flag: '🇯🇵', name: '日本語' },
-      'hi': { flag: '🇮🇳', name: 'हिन्दी' },
-      'es': { flag: '🇪🇸', name: 'Español' },
-      'fr': { flag: '🇫🇷', name: 'Français' },
-      'ar': { flag: '🇸🇦', name: 'العربية' },
-      'pt': { flag: '🇧🇷', name: 'Português' },
-      'ru': { flag: '🇷🇺', name: 'Русский' },
-      'de': { flag: '🇩🇪', name: 'Deutsch' }
-    };
-    
-    if (langMap[savedLang]) {
-      changeLanguage(savedLang, langMap[savedLang].flag, langMap[savedLang].name);
-    }
-  }
+  // Always use Korean for /kr/ pages
+  const langMap = {
+    'en': { flag: '🇬🇧', name: 'EN' },
+    'ko': { flag: '🇰🇷', name: '한국어' },
+    'tl': { flag: '🇵🇭', name: 'Tagalog' },
+    'id': { flag: '🇮🇩', name: 'Bahasa' },
+    'th': { flag: '🇹🇭', name: 'ไทย' },
+    'vi': { flag: '🇻🇳', name: 'Tiếng Việt' },
+    'zh': { flag: '🇨🇳', name: '中文' },
+    'ja': { flag: '🇯🇵', name: '日本語' },
+    'hi': { flag: '🇮🇳', name: 'हिन्दी' },
+    'es': { flag: '🇪🇸', name: 'Español' },
+    'fr': { flag: '🇫🇷', name: 'Français' },
+    'ar': { flag: '🇸🇦', name: 'العربية' },
+    'pt': { flag: '🇧🇷', name: 'Português' },
+    'ru': { flag: '🇷🇺', name: 'Русский' },
+    'de': { flag: '🇩🇪', name: 'Deutsch' }
+  };
+  
+  changeLanguage('ko', langMap['ko'].flag, langMap['ko'].name);
 });
 </script>
 
