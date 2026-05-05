@@ -26,25 +26,76 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "타고자 (TAGOJA)",
-    "alternateName": ["TAGOJA", "타고자"],
-    "url": "https://tagoja.com",
-    "description": "글로벌 커머스 플랫폼 - 마켓플레이스, 드랍쉬핑, 공급망, 물류 통합 솔루션",
-    "slogan": "Trade anything, anywhere",
-    "foundingDate": "2024",
-    "areaServed": [
-      "Southeast Asia",
-      "Global"
-    ],
-    "knowsAbout": [
-      "E-commerce",
-      "Marketplace",
-      "Dropshipping",
-      "Supply Chain",
-      "B2B Commerce",
-      "B2C Commerce",
-      "Cross-border Trade"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://tagoja.com/#organization",
+        "name": "타고자 (TAGOJA)",
+        "alternateName": ["TAGOJA", "tagoja", "타고자"],
+        "url": "https://tagoja.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://tagoja.com/logo.png"
+        },
+        "sameAs": [
+          "https://go.tagoja.com",
+          "https://market.tagoja.com",
+          "https://supply.tagoja.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://tagoja.com/#website",
+        "url": "https://tagoja.com",
+        "name": "타고자 (TAGOJA)",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://tagoja.com/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://tagoja.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://tagoja.com/#webpage",
+        "url": "https://tagoja.com",
+        "name": "타고자 | TAGOJA 글로벌 커머스 플랫폼",
+        "isPartOf": {
+          "@id": "https://tagoja.com/#website"
+        },
+        "about": {
+          "@id": "https://tagoja.com/#organization"
+        },
+        "description": "타고자(TAGOJA)는 글로벌 커머스 플랫폼으로 마켓플레이스, 공급망(Supply Engine), 드랍쉬핑, 물류를 하나로 연결합니다."
+      },
+      {
+        "@type": "OnlineBusiness",
+        "@id": "https://tagoja.com/#platform",
+        "name": "TAGOJA Platform",
+        "url": "https://tagoja.com",
+        "provider": {
+          "@id": "https://tagoja.com/#organization"
+        },
+        "areaServed": {
+          "@type": "Place",
+          "name": "Global"
+        },
+        "makesOffer": [
+          {
+            "@type": "Offer",
+            "name": "Marketplace (C2C / B2C)",
+            "url": "https://market.tagoja.com"
+          },
+          {
+            "@type": "Offer",
+            "name": "Supply Engine (B2B / Dropshipping)",
+            "url": "https://supply.tagoja.com"
+          }
+        ]
+      }
     ]
   }
   </script>
